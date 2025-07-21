@@ -99,10 +99,10 @@
           (function() {
             try {
               var vturbvideoId = "687c2348b59fc4bcfb966a02";
-              var SECONDS_TO_DISPLAY = 954;
+              var SECONDS_TO_DISPLAY = 100;
               var attempts = 0;
               var elsDisplayed = false;
-              var alreadyDisplayedKey = 'alreadyElsDisplayed954';
+              var alreadyDisplayedKey = 'alreadyElsDisplayed100';
               var alreadyElsDisplayed = localStorage.getItem(alreadyDisplayedKey);
 
               var showHiddenElements = function () {
