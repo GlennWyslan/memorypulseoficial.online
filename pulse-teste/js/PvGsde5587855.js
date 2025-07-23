@@ -98,11 +98,11 @@
       })();
           (function() {
             try {
-              var vturbvideoId = "687c2348b59fc4bcfb966a02";
-              var SECONDS_TO_DISPLAY = 954;
+              var vturbvideoId = "688132d3e4534fba9fb1a998";
+              var SECONDS_TO_DISPLAY = 10;
               var attempts = 0;
               var elsDisplayed = false;
-              var alreadyDisplayedKey = 'alreadyElsDisplayed954';
+              var alreadyDisplayedKey = 'alreadyElsDisplayed10';
               var alreadyElsDisplayed = localStorage.getItem(alreadyDisplayedKey);
 
               var showHiddenElements = function () {
