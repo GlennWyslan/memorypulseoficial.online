@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upsell - Onda Neuro Joven</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffffff;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,193,7,0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255,193,7,0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,193,7,0); }
+    }
+    .pulse {
+      animation: pulse 1.5s infinite;
+    }
+    .checkout-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      max-width: 480px;
+    }
+    .checkout-container a {
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      text-align: center;
+      font-weight: bold;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+    .aceitar {
+      background: #ffc107;
+      color: #111;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .recusar {
+      background: none;
+      color: #888;
+      text-decoration: underline;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <a href="https://go.perfectpay.com.br/PPU38CPT89L?upsell=true" class="pulse aceitar">
+      QUIERO ADQUIRIR LA REVISTA QUIERO CIENTÍFICA
+    </a>
+    <a href="https://memorypulseoficial.online/gracias-pp/" class="recusar">
+      No quiero acelerar mis resultados
+    </a>
+  </div>
+</body>
+</html>
