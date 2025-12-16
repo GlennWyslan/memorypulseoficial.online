@@ -1,6 +1,6 @@
 
     <!DOCTYPE html>
-    <html lang="pt-BR" dir="ltr">
+    <html lang="es" dir="ltr">
     <head>
       <title>Video</title><meta name="robots" content="index, follow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta name="description" content="Descrição"><meta http-equiv="X-Content-Type-Options" content="nosniff"><meta http-equiv="X-XSS-Protection" content="1; mode=block"><meta name="referrer" content="strict-origin-when-cross-origin"><meta property="og:type" content="website"><meta property="og:url" content="https://null/"><meta property="og:title" content="Video"><meta property="og:image" content="https://media.atomicatpages.net/Images/ogimage.png"><style type="text/css" media="all">
 :root {
@@ -12,6 +12,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* Theme Colors (only output if set) */
+
+
+
+
+/* Global Colors (only output if set, fallback to theme) */
+
+
+
+
+
+/* Theme Fonts */
 
 
 
@@ -47,6 +69,22 @@ body,
   box-sizing: border-box;
 }
 
+.ql-align-left {
+    text-align: left;
+}
+
+.ql-align-center {
+    text-align: center;
+}
+
+.ql-align-right {
+    text-align: right;
+}
+
+.ql-align-justify {
+    text-align: justify;
+}
+
 
 .a-c-cont-undefined {}body {}.a-c-cont.a-c-cont-undefined {} .a-c-cont-undefined > .a-e-cont {} .a-c-cont-undefined > .a-e-cont:hover {}.a-e-a-undefined {}
 .atomicat-interactive-quiz-progress {
@@ -62,6 +100,76 @@ body,
 .atomicat-interactive-quiz-progress.atomicat-margin-top-zero {
   margin-top: 0;
 }
+
+.a-txt-extra {
+    padding: 1rem;
+    border-radius: .375rem;
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.a-txt-timer {
+    line-height: 1.25;
+    text-align: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.a-txt-extra,
+.a-txt-extra.a-danger {
+    color: rgb(185 28 28);
+    background-color: rgb(254 226 226);
+}
+.a-txt-extra.a-danger.a-highlight {
+    color: rgb(254 242 242);
+    background-color: rgb(220 38 38);
+}
+
+
+.a-txt-extra.a-info {
+    color: rgb(29 78 216);
+    background-color: rgb(219 234 254);
+}
+.a-txt-extra.a-info.a-highlight {
+    color: rgb(239 246 255);
+    background-color: rgb(37 99 235);
+}
+
+
+.a-txt-extra.a-success {
+    color: rgb(21 128 61);
+    background-color: rgb(220 252 231);
+}
+.a-txt-extra.a-success.a-highlight {
+    color: rgb(240 253 244);
+    background-color: rgb(22 163 74);
+}
+
+
+.a-txt-extra.a-warning {
+    color: rgb(161 98 7);
+    background-color: rgb(254 249 195);
+}
+.a-txt-extra.a-warning.a-highlight {
+    color: rgb(66 32 6);
+    background-color: rgb(250 204 21);
+}
+
+
+.a-txt-extra.a-light {
+    color: rgb(63 63 70);
+    background-color: rgb(244 244 245);
+}
+.a-txt-extra.a-light.a-highlight {
+    color: rgb(250 250 250);
+    background-color: rgb(82 82 91);
+}
+
+.a-hidden {
+  display: none;
+}
+
 
 button {
   border: none;
@@ -193,7 +301,8 @@ h6 {
     overflow: hidden;
 }
 
-.a-e-cont.atomicat-infinite-entrance-animation {
+.a-e-cont.atomicat-infinite-entrance-animation,
+.a-b-o-cont.atomicat-infinite-entrance-animation {
   animation-iteration-count: infinite;
 }
 
@@ -325,9 +434,116 @@ h6 {
   }
 }
 
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
+.fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-.atomicat-html-element{
+.fadeInDown {
+  animation: fadeInDown 1s ease-in-out;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 1s ease-in-out;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  animation: fadeInRight 1s ease-in-out;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 1s ease-in-out;
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bounceIn {
+  animation: bounceIn 1s ease-in-out;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.swing {
+  animation: swing 1s ease-in-out;
+}
+@keyframes swing {
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.a-html-ele {
   width: 18px;
   height: 18px;
 }
@@ -336,20 +552,20 @@ h6 {
   background-color: red;
 }
 .atomicat-heading-title, .a-g-s-h {
-  color: #000;
+  
   font-family: "Poppins", sans-serif;
 }
 
 
 
 .atomicat-text, .atomicat-heading-title > span, .atomicat-text > span, .a-g-s-t {
-  color: #000;
+  
   font-family: "Roboto", sans-serif;
 }
-.a-e-cont.atomicat-button > .atomicat-button, .a-g-s-b {
-  color: #fff;
+.a-e-cont.a-btn > .a-btn, .a-g-s-b {
+  
   font-family: "Montserrat", sans-serif;
-  background: var(--a-g-theme-color, rgba(100, 149, 237, 1));
+  
 }
 
 
@@ -486,11 +702,11 @@ h6 {
   transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--atomicat-transform-transition-duration, .4s);
 }
 
-.a-e-cont.atomicat-googlemaps {
+.a-e-cont.a-gmaps {
   overflow: hidden;
 }
 
-.atomicat-flex {
+.a-flex {
   display: flex;
 }
 
@@ -507,19 +723,19 @@ h6 {
   flex-direction: column;
 }
 
-.atomicat-flex-start {
+.a-flex-start {
   align-self: flex-start;
 }
 
-.atomicat-flex-end {
+.a-flex-end {
   align-self: flex-end;
 }
 
-.atomicat-flex-center {
+.a-flex-center {
   align-self: center;
 }
 
-.atomicat-flex-wrapper {
+.a-flex-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -906,10 +1122,10 @@ h6 {
         }
     
 
-        .atomicat-video {
+        .a-video {
             overflow: hidden;
         }
-        .atomicat-video iframe {
+        .a-video iframe {
             height: 100%;
             width: 100%;
         }
@@ -957,11 +1173,11 @@ h6 {
         }
     
 
-        .atomicat-image {
+        .a-img-ele {
             overflow: hidden;
             text-align: center;
         }
-        .atomicat-image img {
+        .a-img-ele img {
             display: inline-block;
             max-width: 100%;
             height: auto;
@@ -972,79 +1188,17 @@ h6 {
         .atomicat-text * {
             word-break: break-word;
         }
+        .atomicat-text ul {
+            padding-left: revert;
+        }
         .atomicat-text {
             white-space: pre-line;
-            color: var(--a-g-content-color);
+            color: var(--a-text-color, var(--a-pry-color, var(--a-g-content-color, inherit)));
         }
         .atomicat-text :is(h1, h2, h3, h4, h5, h6) {
-            color: var(--a-g-title-color);
+            color: var(--a-heading-color, var(--a-pry-color, var(--a-g-title-color, inherit)));
         }
         
-        /* Alert styles - Default (danger/red) */
-        .a-txt-extra,
-        .a-txt-extra.a-danger {
-            color: rgb(185 28 28);
-            background-color: rgb(254 226 226);
-        }
-        .a-txt-extra.a-danger.a-highlight {
-            color: rgb(254 242 242);
-            background-color: rgb(220 38 38);
-        }
-        
-        /* Info (blue) alert styles */
-        .a-txt-extra.a-info {
-            color: rgb(29 78 216);
-            background-color: rgb(219 234 254);
-        }
-        .a-txt-extra.a-info.a-highlight {
-            color: rgb(239 246 255);
-            background-color: rgb(37 99 235);
-        }
-        
-        /* Success (green) alert styles */
-        .a-txt-extra.a-success {
-            color: rgb(21 128 61);
-            background-color: rgb(220 252 231);
-        }
-        .a-txt-extra.a-success.a-highlight {
-            color: rgb(240 253 244);
-            background-color: rgb(22 163 74);
-        }
-        
-        /* Warning (yellow) alert styles */
-        .a-txt-extra.a-warning {
-            color: rgb(161 98 7);
-            background-color: rgb(254 249 195);
-        }
-        .a-txt-extra.a-warning.a-highlight {
-            color: rgb(66 32 6);
-            background-color: rgb(250 204 21);
-        }
-        
-        /* Light (gray) alert styles */
-        .a-txt-extra.a-light {
-            color: rgb(63 63 70);
-            background-color: rgb(244 244 245);
-        }
-        .a-txt-extra.a-light.a-highlight {
-            color: rgb(250 250 250);
-            background-color: rgb(82 82 91);
-        }
-
-        .a-txt-extra {
-            padding: 1rem;
-            border-radius: .375rem;
-            line-height: 1.4;
-            font-size: 16px;
-            font-weight: 400;
-        }
-        
-        .a-txt-timer {
-            line-height: 1.25;
-            text-align: center;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-        }
         .atomicat-text p {
             font-size: 16px;
             font-weight: 400;
@@ -1070,7 +1224,7 @@ h6 {
 
 
 
-    .atomicat-html .a-i-e-cont iframe {
+    .a-html .a-i-e-cont iframe {
         width: 100%;
         height: 100vh;
         border: none;
@@ -1109,20 +1263,20 @@ h6 {
 ></script>
 
 <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" href="https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/players/68a4e97acad301b5b6b57d45/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/players/688bd29ffef6b9b87f4df054/v4/player.js" as="script">
 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/68a4e9314c5f3a46b8a9a6ca/main.m3u8" as="fetch">
+<link rel="preload" href="https://cdn.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/688bd289fef6b9b87f4df04a/main.m3u8" as="fetch">
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
 <link rel="dns-prefetch" href="https://scripts.converteai.net">
 <link rel="dns-prefetch" href="https://images.converteai.net">
 <link rel="dns-prefetch" href="https://api.vturb.com.br">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecg.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiAo.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXo.woff2" crossorigin><style>/* cyrillic-ext */
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5Z1xlFQ.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiAo.woff2" crossorigin><link rel="preload" as="font" href="https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXo.woff2" crossorigin><style>/* cyrillic-ext */
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w0aXpsog.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w0aXpsog.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
@@ -1131,7 +1285,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w9aXpsog.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w9aXpsog.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* vietnamese */
@@ -1140,7 +1294,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w2aXpsog.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w2aXpsog.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
@@ -1149,7 +1303,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w3aXpsog.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w3aXpsog.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -1158,7 +1312,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXo.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXo.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* devanagari */
@@ -1167,7 +1321,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 /* latin-ext */
@@ -1176,7 +1330,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -1185,7 +1339,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* devanagari */
@@ -1194,7 +1348,7 @@ h6 {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2) format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 /* latin-ext */
@@ -1203,7 +1357,7 @@ h6 {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -1212,7 +1366,7 @@ h6 {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* devanagari */
@@ -1221,7 +1375,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 /* latin-ext */
@@ -1230,7 +1384,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -1239,7 +1393,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* devanagari */
@@ -1248,7 +1402,7 @@ h6 {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2) format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 /* latin-ext */
@@ -1257,7 +1411,7 @@ h6 {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -1266,7 +1420,34 @@ h6 {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5Z11lFc-K.woff2) format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5Z1JlFc-K.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5Z1xlFQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
@@ -1276,7 +1457,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmZiArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmZiArmlw.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
@@ -1286,7 +1467,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmQiArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmQiArmlw.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek-ext */
@@ -1296,7 +1477,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmYiArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmYiArmlw.woff2) format('woff2');
   unicode-range: U+1F00-1FFF;
 }
 /* greek */
@@ -1306,7 +1487,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmXiArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmXiArmlw.woff2) format('woff2');
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 /* math */
@@ -1316,7 +1497,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVnoiArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVnoiArmlw.woff2) format('woff2');
   unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
 }
 /* symbols */
@@ -1326,7 +1507,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVn6iArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVn6iArmlw.woff2) format('woff2');
   unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
 }
 /* vietnamese */
@@ -1336,7 +1517,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmbiArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmbiArmlw.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
@@ -1346,7 +1527,7 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmaiArmlw.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmaiArmlw.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -1356,31 +1537,19 @@ h6 {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiAo.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/roboto/v50/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiAo.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 </style>
     </head>
-    <body data-page="_6GiWMpccp2Xcp2h6PVge" data-variant="jazdvk02xp" data-page-type="page" data-version="1.9" class="atomicat-disable-selection">
+    <body class="atomicat-disable-selection" data-page="_jayu9UmdUyqr0febe9uR" data-version="3.0" data-variant="u8im3sipuug" data-page-type="page">
       
       
-      <div class="a-b-cont"><div class="a-b-o-cont atomicat-container-8f2a995"><style>.atomicat-container-8f2a995 > .a-o-cont {padding-top: 0px;padding-bottom: 0px;}.a-e-a-8f2a995 {}.atomicat-container-8f2a995 > .a-o-cont > .a-cont {flex-direction: row;}.a-b-cont .atomicat-container-8f2a995.a-b-o-cont {background: rgba(243, 39, 39, 1);background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-8f2a995 > .a-o-cont {}</style><div class="a-o-cont a-cont-f-w"><div class="a-s-d-qd9c8x a-cont a-i-cont"><div class="a-b-o-cont atomicat-container-7aea6be"><style>.atomicat-container-7aea6be > .a-o-cont {}.a-e-a-7aea6be {}.atomicat-container-7aea6be > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-7aea6be.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;width: 100%;}@media screen and (max-width: 480px) {.a-b-cont .atomicat-container-7aea6be.a-b-o-cont{width: 100%;}}.atomicat-container-7aea6be > .a-o-cont {}</style><div class="a-s-d-tcfiv7 a-cont-f-w a-o-cont"><div class="a-cont a-s-d-9efpfc a-i-cont"><div class="a-c-cont-4afd409 a-c-cont a-r"><style>.a-c-cont-4afd409 {}.a-c-cont.a-c-cont-4afd409 {}.a-e-cont.atomicat-heading-title-4afd409 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-4afd409 h3 {text-align: center;color: rgba(255, 255, 255, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-4afd409 h3{font-size: 13px;}} .a-c-cont-4afd409 > .a-e-cont {}@media screen and (max-width: 480px) {.a-c-cont-4afd409 > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-4afd409 > .a-e-cont:hover {}.a-e-a-4afd409 {}</style><div class="atomicat-heading-title a-s-d-02bcky atomicat-heading-title-4afd409 atomicat-text-4afd409 a-e-cont a-r  atomicat-element-container-4afd409"><!-- text - 4uypbb --><h3 class="     ">⚠️ NO CIERRE ESTA PÁGINA! UN MENSAJE IMPORTANTE...<br /><span style="color: rgba(255, 231, 0, 1);">¡Oportunidad única para MEJORAR su orden!</span></h3></div></div></div></div></div></div></div></div><div class="a-s-d-h9verd a-b-o-cont atomicat-container-8c56bc6"><style>.atomicat-container-8c56bc6 > .a-o-cont {}.a-e-a-8c56bc6 {}.atomicat-container-8c56bc6 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-8c56bc6.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-8c56bc6 > .a-o-cont {}</style><div class="a-cont-b a-o-cont"><div class="a-cont a-i-cont a-s-d-rc2u5d"><div class="a-c-cont-445ed43 a-c-cont a-s-d-l8ihp3 a-r"><style>.a-c-cont-445ed43 {}.a-c-cont.a-c-cont-445ed43 {}.a-e-cont.atomicat-heading-title-445ed43 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-445ed43 h3 {text-align: center;font-size: 36px;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-445ed43 h3{font-size: 15px;}} .a-c-cont-445ed43 > .a-e-cont {margin-top: 25px;margin-bottom: 15px;} .a-c-cont-445ed43 > .a-e-cont:hover {}.a-e-a-445ed43 {}</style><div class="a-r atomicat-element-container-445ed43 atomicat-heading-title  a-e-cont atomicat-heading-title-445ed43 atomicat-text-445ed43 a-s-d-lrazvs"><h3 class="     "><span style="background: rgba(255, 255, 0, 1);">Porfavor, mire esta importante actualización para nuevos miembros a continuación</span></h3></div></div></div></div></div><div class="a-b-o-cont atomicat-container-a4618ed"><!-- container - 3b3bp6 --><style>.atomicat-container-a4618ed > .a-o-cont {}.a-e-a-a4618ed {}.atomicat-container-a4618ed > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-a4618ed.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-a4618ed > .a-o-cont {}</style><div class="a-cont-b a-o-cont a-s-d-83mnld"><div class="a-i-cont a-cont"><div class="a-c-cont-1cbee73 a-c-cont a-r"><style>.a-c-cont-1cbee73 {}.a-c-cont.a-c-cont-1cbee73 {}.a-c-cont-1cbee73 {width: 100%;} .a-c-cont-1cbee73 > .a-e-cont {} .a-c-cont-1cbee73 > .a-e-cont:hover {}.a-e-a-1cbee73 {}</style><div class=" atomicat-element-container-1cbee73 a-r a-e-cont a-s-d-57n4oj atomicat-video-1cbee73 atomicat-video"><div style="aspect-ratio:1.77777"><vturb-smartplayer id="vid-68a4e97acad301b5b6b57d45" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/players/68a4e97acad301b5b6b57d45/v4/player.js", s.async=!0,document.head.appendChild(s); </script></div></div></div></div></div></div><div class="a-b-o-cont atomicat-container-a0d82a0"><style>.atomicat-container-a0d82a0 > .a-o-cont {}.a-e-a-a0d82a0 {}.atomicat-container-a0d82a0 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-a0d82a0.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-a0d82a0 > .a-o-cont {}</style><div class="a-o-cont a-cont-b"><div class="a-i-cont a-cont"><div class="a-s-d-y29fiw a-r a-c-cont a-c-cont-80a9a9f"><style>.a-c-cont-80a9a9f {}.a-c-cont.a-c-cont-80a9a9f {}.a-e-cont.atomicat-heading-title-80a9a9f h1:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-80a9a9f h1 {font-size: 22px;text-align: center;font-weight: 500;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-80a9a9f h1{font-size: 13px;}} .a-c-cont-80a9a9f > .a-e-cont {margin-top: 9px;} .a-c-cont-80a9a9f > .a-e-cont:hover {}.a-e-a-80a9a9f {}</style><div class="atomicat-heading-title atomicat-text-80a9a9f atomicat-element-container-80a9a9f  a-r atomicat-heading-title-80a9a9f a-e-cont a-s-d-87mxf0"><!-- text - r09gz4 --><h1 class="     ">🔊 <strong>Este video dura 5 min,</strong> míralo hasta el final…</h1></div></div><div class="a-s-d-zkzmlg a-r a-c-cont-bd6c02c a-c-cont"><style>.a-c-cont-bd6c02c {}.a-c-cont.a-c-cont-bd6c02c {}.a-e-cont.atomicat-heading-title-bd6c02c h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-bd6c02c h3 {text-align: center;font-size: 22px;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-bd6c02c h3{text-align: left;font-size: 12px;}} .a-c-cont-bd6c02c > .a-e-cont {margin-top: 10px;margin-left: 75px;margin-right: 75px;margin-bottom: 50px;}@media screen and (max-width: 480px) {.a-c-cont-bd6c02c > .a-e-cont{margin-left: 15px;margin-right: 0px;margin-bottom: 0px;}} .a-c-cont-bd6c02c > .a-e-cont:hover {}.a-e-a-bd6c02c {}</style><div class="atomicat-heading-title atomicat-heading-title-bd6c02c a-r a-e-cont atomicat-text-bd6c02c atomicat-element-container-bd6c02c  a-s-d-eoc8ya"><!-- text - 6gz656 --><h3 class="     "><span style="color: rgba(255, 49, 49, 1);"><strong>PRIMER PASO:</strong></span> Mire esta importante actualización completa para nuevos miembros ahora mismo. <strong>Su enlace para hacer un UPGRAGE (MEJORA) en su orden</strong> aparecerá al final de su video.</h3></div></div></div></div></div><div class="a-b-o-cont atomicat-container-b7acf2c atomicat-delay a-u-2" data-hex="eU0h2sR1L"><style>.atomicat-container-b7acf2c > .a-o-cont {}.a-e-a-b7acf2c {}.atomicat-container-b7acf2c > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-b7acf2c.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-b7acf2c > .a-o-cont {}</style><div class="a-o-cont a-cont-b"><div class="a-cont a-i-cont"><div class="a-c-cont a-r a-c-cont-c99411f"><style>.a-c-cont-c99411f {}.a-c-cont.a-c-cont-c99411f {}.a-e-cont.atomicat-heading-title-c99411f h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-c99411f h3 {text-align: center;font-size: 23px;font-weight: 400;color: rgba(0, 74, 173, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-c99411f h3{font-size: 14px;}} .a-c-cont-c99411f > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-c99411f > .a-e-cont{margin-left: 20px;margin-right: 20px;}} .a-c-cont-c99411f > .a-e-cont:hover {}.a-e-a-c99411f {}</style><div class="a-r  atomicat-element-container-c99411f a-s-d-p2b2ex atomicat-heading-title a-e-cont atomicat-text-c99411f atomicat-heading-title-c99411f"><h3 class="     ">¡Click en el botón de abajo 👇 <strong>para Mejorar tu orden Ahora!</strong></h3></div></div><div class="a-c-cont-161d610 a-c-cont a-r a-s-d-jitbrh"><style>.a-c-cont-161d610 {}.a-c-cont.a-c-cont-161d610 {}.atomicat-html-161d610 .a-i-e-cont iframe {height: 18vh;} .a-c-cont-161d610 > .a-e-cont {} .a-c-cont-161d610 > .a-e-cont:hover {}.a-e-a-161d610 {}</style><div class="a-e-cont a-r a-s-d-pp26qb atomicat-html-161d610 atomicat-html atomicat-element-container-161d610 "><!-- html - cfid2w --><div class="a-i-e-cont"><div style="text-align:center">
-  <button id="kiwify-upsell-FviDpN6" style="background-color:#F2C511;padding:12px 16px;cursor:pointer;color:#000000;font-weight:600;border-radius:4px;border:1px solid #F2C511;font-size:20px;">
-    QUIERO ACTIVAR LA ONDE NEURO JOVEN
-  </button>
-</div>
-
-<script>
-  let nextUpsellURL = "https://memorypulseoficial.online/oto2-k";
-</script>
-<script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
-</div></div></div><div class="a-c-cont a-r a-c-cont-2a53378"><style>.a-c-cont-2a53378 {}.a-c-cont.a-c-cont-2a53378 {}.a-e-cont.atomicat-heading-title-2a53378 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-2a53378 h3 {text-align: center;font-size: 33px;font-weight: 600;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-2a53378 h3{font-size: 20px;}} .a-c-cont-2a53378 > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-2a53378 > .a-e-cont{margin-top: 40px;margin-left: 0px;margin-right: 0px;}} .a-c-cont-2a53378 > .a-e-cont:hover {}.a-e-a-2a53378 {}</style><div class="atomicat-text-2a53378 atomicat-heading-title-2a53378 atomicat-element-container-2a53378  atomicat-heading-title a-s-d-save4t a-e-cont a-r"><!-- text - 2cim7y --><h3 class="     ">¡ACTIVA TU <span style="background: rgba(0, 74, 173, 1);"><span style="color: rgba(255, 255, 255, 1);">ONDA NEURO–JOVEN</span></span> HOY MISMO!</h3></div></div></div></div></div><div class="atomicat-delay a-b-o-cont atomicat-container-f21c061 a-s-d-bo5zhw"><style>.atomicat-container-f21c061 > .a-o-cont {}.a-e-a-f21c061 {}.atomicat-container-f21c061 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-f21c061.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-f21c061 > .a-o-cont {}</style><div class="a-o-cont a-cont-b"><div class="a-i-cont a-s-d-mvt7ml a-cont"><div class="a-c-cont a-r a-c-f-w a-c-cont-675fd07 a-s-d-1e4f4t"><style>.a-c-cont-675fd07 {}.a-c-cont.a-c-cont-675fd07 {}.atomicat-image-675fd07 img {}.atomicat-image-675fd07 {} .a-c-cont-675fd07 > .a-e-cont {} .a-c-cont-675fd07 > .a-e-cont:hover {}.a-e-a-675fd07 {}</style><div class="a-e-cont a-s-d-w323tw atomicat-image  a-r atomicat-element-container-675fd07 atomicat-image-675fd07"><!-- image - f4ccib --><img loading="lazy" fetchpriority="auto" decoding="async" width="750" height="422" src="https://media.atomicatpages.net/u/cOHbGd74jKeU0h2sR1LwlEntaHi2/Pictures/tn04i/wQDFMM3949044.png?quality=88#847078" alt="" srcset="https://media.atomicatpages.net/u/cOHbGd74jKeU0h2sR1LwlEntaHi2/Pictures/tn04i/wQDFMM3949044.png?quality=81#107048 750w,https://media.atomicatpages.net/u/cOHbGd74jKeU0h2sR1LwlEntaHi2/Pictures/tn04i/wQDFMM3949044.png?width=300&amp;height=160&amp;quality=73#301392 300w" class="    " sizes="(max-width: 750px) 100vw, 750px"/></div></div><div class="a-s-d-spitpf a-r a-c-cont a-c-cont-def6022"><style>.a-c-cont-def6022 {}.a-c-cont.a-c-cont-def6022 {}.a-e-cont.atomicat-heading-title-def6022 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-def6022 h3 {text-align: center;font-size: 23px;font-weight: 400;color: rgba(0, 74, 173, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-def6022 h3{font-size: 14px;}} .a-c-cont-def6022 > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-def6022 > .a-e-cont{margin-left: 20px;margin-right: 20px;}} .a-c-cont-def6022 > .a-e-cont:hover {}.a-e-a-def6022 {}</style><div class="a-r atomicat-heading-title atomicat-element-container-def6022 a-s-d-dxiehl atomicat-heading-title-def6022 atomicat-text-def6022 a-e-cont "><!-- text - 9de0te --><h3 class="     ">¡Click en el botón de abajo 👇 <strong>para Mejorar tu orden Ahora!</strong></h3></div></div></div></div></div><div class="atomicat-delay a-b-o-cont a-u-1 atomicat-container-6590eaf a-s-d-u07k2j" data-hex="cOHbGd74jK"><style>.atomicat-container-6590eaf > .a-o-cont {}.a-e-a-6590eaf {}.atomicat-container-6590eaf > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-6590eaf.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-6590eaf > .a-o-cont {}</style><div class="a-cont-b a-o-cont"><div class="a-s-d-ikgve3 a-i-cont a-cont"><div class="a-r a-c-cont a-c-cont-8438054"><style>.a-c-cont-8438054 {}.a-c-cont.a-c-cont-8438054 {}.atomicat-html-8438054 .a-i-e-cont iframe {height: 18vh;} .a-c-cont-8438054 > .a-e-cont {} .a-c-cont-8438054 > .a-e-cont:hover {}.a-e-a-8438054 {}</style><div class="a-r a-e-cont atomicat-html atomicat-element-container-8438054  a-s-d-e8ic55 atomicat-html-8438054"><div class="a-i-e-cont"><div style="text-align:center">
-          <button id="kiwify-upsell-FviDpN6" style="background-color:#F2C511;padding:12px 16px;cursor:pointer;color:#000000;font-weight:600;border-radius:4px;border:1px solid #F2C511;font-size:20px;">QUIERO ACTIVAR LA ONDE NEURO JOVEN</button>
-          <div id="kiwify-upsell-cancel-trigger-FviDpN6" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">No quiero acelerar mis resultados</div>
-        </div><script> 
-            let nextUpsellURL = "https://memorypulseoficial.online/oto2-k";
-            let nextDownsellURL = "https://memorypulseoficial.online/ds1-k";</script><script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script></div></div></div></div></div></div><div class="a-s-d-6ilvok a-b-o-cont atomicat-delay atomicat-container-08278fb"><!-- container - v6hsrt --><style>.atomicat-container-08278fb > .a-o-cont {}.a-e-a-08278fb {}.atomicat-container-08278fb > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-08278fb.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-08278fb > .a-o-cont {}</style><div class="a-cont-b a-o-cont a-s-d-81a7di"><div class="a-cont a-i-cont a-s-d-58w5r1"><div class="a-s-d-apgum2 a-c-cont-57d0331 a-r a-c-f-w a-c-cont"><style>.a-c-cont-57d0331 {}.a-c-cont-57d0331 > .a-e-cont.atomicat-spacer-57d0331 {}.a-c-cont.a-c-cont-57d0331 {} .a-c-cont-57d0331 > .a-e-cont {} .a-c-cont-57d0331 > .a-e-cont:hover {}.a-e-a-57d0331 {}</style><div class=" atomicat-element-container-57d0331 a-r a-s-d-rpykn7 a-e-cont atomicat-spacer-57d0331 atomicat-spacer"><div class="a-i-e-cont"></div></div></div></div></div></div><div class="a-b-o-cont atomicat-container-c315d53 atomicat-delay"><style>.atomicat-container-c315d53 > .a-o-cont {}.a-e-a-c315d53 {}.atomicat-container-c315d53 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-c315d53.a-b-o-cont {background: rgba(224, 224, 224, 1);background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-c315d53 > .a-o-cont {}</style><div class="a-o-cont a-cont-b a-s-d-l37a1i"><div class="a-s-d-a7b5of a-cont a-i-cont"><div class="a-c-cont-5d3f1cb a-r a-c-cont"><style>.a-c-cont-5d3f1cb {}.a-c-cont.a-c-cont-5d3f1cb {}.a-e-cont.atomicat-heading-title-5d3f1cb h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-5d3f1cb h3 {text-align: center;font-size: 26px;font-weight: 600;color: rgba(0, 0, 0, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-5d3f1cb h3{font-size: 14px;}} .a-c-cont-5d3f1cb > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-5d3f1cb > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-5d3f1cb > .a-e-cont:hover {}.a-e-a-5d3f1cb {}</style><div class="a-s-d-z17v5x atomicat-heading-title  a-e-cont atomicat-element-container-5d3f1cb atomicat-text-5d3f1cb a-r atomicat-heading-title-5d3f1cb"><h3 class="     ">¡ACTIVA AHORA MISMO TU ONDA NEURO-JOVEN, ESPECIALMENTE DISEÑADA PARA RETARDAR EL ENVEJECIMIENTO CEREBRAL, E INCLUSO REVERTIR LA EDAD DE TU CEREBRO.</h3></div></div><div class="a-c-cont a-c-cont-8b9967a a-r a-s-d-xz6k6p"><style>.a-c-cont-8b9967a {}.a-c-cont.a-c-cont-8b9967a {}.a-e-cont.atomicat-heading-title-8b9967a h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-8b9967a h3 {text-align: left;font-size: 23px;font-weight: 400;color: rgba(0, 0, 0, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-8b9967a h3{text-align: center;font-size: 11px;}} .a-c-cont-8b9967a > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-8b9967a > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-8b9967a > .a-e-cont:hover {}.a-e-a-8b9967a {}</style><div class="atomicat-element-container-8b9967a a-e-cont atomicat-heading-title-8b9967a atomicat-heading-title a-s-d-vpbufg a-u-3 atomicat-text-8b9967a a-r " data-hex="wlEntaHi2"><h3 class="     ">Quiero que tengas la oportunidad de poder sentirte joven nuevamente, razonar rápidamente y disfrutar mucha jovialidad<br /><br />Lo que se le ofrece aquí es absolutamente automático y sin esfuerzo, por lo que puede sentarse y relajarse, porque una vez que haya terminado con este programa, tendrás un cerebro imparable, un cerebro joven. Habrás activado el nervio vago, lo que te permite retrasar el envejecimiento cerebral y quitarle años a tu cerebro.<br /><br />Serás una persona nueva, con esperanzas, sueños y deseos renovados. Todo al alcance gracias a tu nuevo cerebro joven.<br /><br />Te Presentamos la <strong>Onda Neuro-Joven</strong> <span style="color: rgba(255, 49, 49, 1);">(<strong>Precio Original:</strong> <s>297$</s>)</span> Hoy a tan solo (67$)</h3></div></div><div class="a-c-cont a-c-cont-c8bfcf7 a-r"><style>.a-c-cont-c8bfcf7 {}.a-c-cont.a-c-cont-c8bfcf7 {}.a-e-cont.atomicat-heading-title-c8bfcf7 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-c8bfcf7 h3 {text-align: center;font-size: 28px;font-weight: 600;color: rgba(0, 0, 0, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-c8bfcf7 h3{font-size: 17px;}} .a-c-cont-c8bfcf7 > .a-e-cont {margin-top: 20px;margin-left: 150px;margin-right: 150px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-c8bfcf7 > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-c8bfcf7 > .a-e-cont:hover {}.a-e-a-c8bfcf7 {}</style><div class=" atomicat-heading-title-c8bfcf7 atomicat-element-container-c8bfcf7 a-e-cont atomicat-heading-title a-r atomicat-text-c8bfcf7"><h3 class="     "><span style="background: rgba(0, 255, 79, 1);">☝️ ¡DESLIZA ARRIBA Y ACTUALIZA TU ORDEN MEJORADA AHORA! ☝️</span></h3></div></div></div></div></div></div>
-      <script src="js/YuLjRA1271543.js" charset="utf-8" id="a-js" defer></script><script type="text/javascript" defer>function _0x41a3(_0x5cac05,_0x559675){var _0xdaae55=_0x4327();return _0x41a3=function(_0x1f19bb,_0x58a6ee){_0x1f19bb=_0x1f19bb-0xc5;var _0x849c6a=_0xdaae55[_0x1f19bb];if(_0x41a3['jmAuDK']===undefined){var _0x2e2b48=function(_0x41a3c1){var _0x409d70='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x3d589d='',_0x34e964='',_0x177ecd=_0x3d589d+_0x2e2b48;for(var _0x5d593f=0x0,_0x131c6f,_0x42a8e9,_0x10b36b=0x0;_0x42a8e9=_0x41a3c1['charAt'](_0x10b36b++);~_0x42a8e9&&(_0x131c6f=_0x5d593f%0x4?_0x131c6f*0x40+_0x42a8e9:_0x42a8e9,_0x5d593f++%0x4)?_0x3d589d+=_0x177ecd['charCodeAt'](_0x10b36b+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x131c6f>>(-0x2*_0x5d593f&0x6)):_0x5d593f:0x0){_0x42a8e9=_0x409d70['indexOf'](_0x42a8e9);}for(var _0x13cd3a=0x0,_0x4187d5=_0x3d589d['length'];_0x13cd3a<_0x4187d5;_0x13cd3a++){_0x34e964+='%'+('00'+_0x3d589d['charCodeAt'](_0x13cd3a)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x34e964);};_0x41a3['vHsrKE']=_0x2e2b48,_0x5cac05=arguments,_0x41a3['jmAuDK']=!![];}var _0x2df7ed=_0xdaae55[0x0],_0x4f66d4=_0x1f19bb+_0x2df7ed,_0x43277e=_0x5cac05[_0x4f66d4];if(!_0x43277e){var _0x58969c=function(_0x14869f){this['AkBcBl']=_0x14869f,this['MWmgMC']=[0x1,0x0,0x0],this['lieuOx']=function(){return'newState';},this['nDLWiD']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['yvzYvn']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x58969c['prototype']['hAYzId']=function(){var _0x2393f1=new RegExp(this['nDLWiD']+this['yvzYvn']),_0x148815=_0x2393f1['test'](this['lieuOx']['toString']())?--this['MWmgMC'][0x1]:--this['MWmgMC'][0x0];return this['CZFPKu'](_0x148815);},_0x58969c['prototype']['CZFPKu']=function(_0x3a805a){if(!Boolean(~_0x3a805a))return _0x3a805a;return this['UzLIsP'](this['AkBcBl']);},_0x58969c['prototype']['UzLIsP']=function(_0x4bcae3){for(var _0x3ca156=0x0,_0x1775e5=this['MWmgMC']['length'];_0x3ca156<_0x1775e5;_0x3ca156++){this['MWmgMC']['push'](Math['round'](Math['random']())),_0x1775e5=this['MWmgMC']['length'];}return _0x4bcae3(this['MWmgMC'][0x0]);},new _0x58969c(_0x41a3)['hAYzId'](),_0x849c6a=_0x41a3['vHsrKE'](_0x849c6a),_0x5cac05[_0x4f66d4]=_0x849c6a;}else _0x849c6a=_0x43277e;return _0x849c6a;},_0x41a3(_0x5cac05,_0x559675);}(function(_0x2939a8,_0x582df9){var _0x5c36f4=_0x41a3,_0x36362d=_0x2939a8();while(!![]){try{var _0x5cafa5=-parseInt(_0x5c36f4(0x11b))/0x1*(parseInt(_0x5c36f4(0x16d))/0x2)+parseInt(_0x5c36f4(0xf6))/0x3+-parseInt(_0x5c36f4(0x144))/0x4*(-parseInt(_0x5c36f4(0x119))/0x5)+-parseInt(_0x5c36f4(0xf3))/0x6+-parseInt(_0x5c36f4(0xde))/0x7+parseInt(_0x5c36f4(0xf0))/0x8+parseInt(_0x5c36f4(0xda))/0x9*(parseInt(_0x5c36f4(0x15a))/0xa);if(_0x5cafa5===_0x582df9)break;else _0x36362d['push'](_0x36362d['shift']());}catch(_0x5bbf40){_0x36362d['push'](_0x36362d['shift']());}}}(_0x4327,0xf1119),(function(){var _0x4ea230=_0x41a3,_0xafe9e6={'aCEeZ':function(_0x296899,_0x801a63){return _0x296899(_0x801a63);},'eHcOP':function(_0xd1ab13,_0x52f089){return _0xd1ab13+_0x52f089;},'QdYIQ':_0x4ea230(0x167)+_0x4ea230(0x10e),'oPKyX':'{}.constru'+_0x4ea230(0xfb)+'rn\x20this\x22)('+'\x20)','PFpqN':function(_0x3f4741){return _0x3f4741();},'DOhmj':_0x4ea230(0x11e),'HwXiY':_0x4ea230(0x122),'dlxTR':_0x4ea230(0xfe)+_0x4ea230(0x147)+_0x4ea230(0x133)+_0x4ea230(0x138)+_0x4ea230(0xe9)+_0x4ea230(0x149)+_0x4ea230(0x121)+_0x4ea230(0xd2)+_0x4ea230(0x12d)+_0x4ea230(0xeb)+_0x4ea230(0x113)+_0x4ea230(0x12b)+'8px;text-a'+'lign:cente'+'r;color:#3'+_0x4ea230(0x129)+'und:#f5f5f'+_0x4ea230(0x11a)+_0x4ea230(0x143)+_0x4ea230(0xf2)+'zing:borde'+_0x4ea230(0x107)+_0x4ea230(0xef)+_0x4ea230(0x139)+_0x4ea230(0x150)+_0x4ea230(0xcf)+_0x4ea230(0x15f)+_0x4ea230(0x135)+_0x4ea230(0x11f)+_0x4ea230(0x152)+_0x4ea230(0xd1),'LEObq':function(_0x5a14e1,_0x2853c2){return _0x5a14e1!==_0x2853c2;},'XDfOs':'FHxbk','PhWlc':function(_0x48af0c,_0x187594){return _0x48af0c===_0x187594;},'XkFHP':_0x4ea230(0x127),'BxARD':_0x4ea230(0x159)+'+$','sPwAz':function(_0x1178bc){return _0x1178bc();},'GOgys':_0x4ea230(0x145),'SfVfi':_0x4ea230(0x102),'wOQMY':_0x4ea230(0x104),'EVTME':_0x4ea230(0x161),'ybdFb':_0x4ea230(0x15b),'WJimu':_0x4ea230(0x162),'WiKGC':function(_0x120cfe,_0x2e9a9a){return _0x120cfe<_0x2e9a9a;},'LFcyz':_0x4ea230(0x14f),'hBCFT':function(_0x15550c){return _0x15550c();},'yhhPI':function(_0x3eaae4,_0x45b558,_0x1fe453){return _0x3eaae4(_0x45b558,_0x1fe453);},'QbHeT':_0x4ea230(0x120)+'isitor_id','KVYIz':function(_0x16b23f,_0x54b9b5){return _0x16b23f+_0x54b9b5;},'RIIJC':function(_0x47a060,_0x3b88e7){return _0x47a060+_0x3b88e7;},'QVSFR':_0x4ea230(0x115),'ODljK':function(_0x563b73,_0x5460b2){return _0x563b73(_0x5460b2);},'GGPKR':function(_0x552466,_0x57a1fc){return _0x552466+_0x57a1fc;},'AjrGj':_0x4ea230(0xe0)+'3','NKpXi':function(_0x680485,_0x513d48){return _0x680485===_0x513d48;},'dpgGC':function(_0x31182e,_0x302741){return _0x31182e===_0x302741;},'rUicH':_0x4ea230(0x148),'DXNCU':'aylky','goWUK':'xiNTE','xZzsh':_0x4ea230(0x12f),'oWPcQ':function(_0x9ea07c){return _0x9ea07c();},'nUHoe':_0x4ea230(0x142),'KpdGz':_0x4ea230(0x14d)+_0x4ea230(0xc8)+_0x4ea230(0x16b)+_0x4ea230(0xfc)+'/visitor/v'+'erify-plan','kfjby':_0x4ea230(0x169)+'pe'},_0x2387e5=(function(){var _0x59fd9e=_0x4ea230;if(_0xafe9e6[_0x59fd9e(0x158)](_0x59fd9e(0x13b),_0xafe9e6[_0x59fd9e(0x10f)])){var _0x5c33de=!![];return function(_0xb97686,_0x291537){var _0x16276a=_0x59fd9e,_0x1b570b={'WtxcE':function(_0x3f641f,_0x3f3760){var _0x2ef7c3=_0x41a3;return _0xafe9e6[_0x2ef7c3(0xe2)](_0x3f641f,_0x3f3760);},'VKpyE':function(_0x55f628,_0x5a3c0b){return _0xafe9e6['eHcOP'](_0x55f628,_0x5a3c0b);},'fBrhX':function(_0x62804f,_0x31d2af){return _0x62804f+_0x31d2af;},'RgRPd':_0xafe9e6['QdYIQ'],'pAQsy':_0xafe9e6['oPKyX'],'pqqJM':function(_0x4c965c){return _0xafe9e6['PFpqN'](_0x4c965c);},'kUvDw':function(_0x261098,_0x2feb50){return _0x261098===_0x2feb50;},'yKANY':_0xafe9e6[_0x16276a(0x14b)],'GVqVo':_0xafe9e6[_0x16276a(0xff)]},_0x378930=_0x5c33de?function(){var _0x1713eb=_0x16276a;if(_0x291537){if(_0x1b570b[_0x1713eb(0x12a)](_0x1b570b[_0x1713eb(0x157)],_0x1b570b[_0x1713eb(0xf1)])){var _0x311714=tdlLjV[_0x1713eb(0x130)](_0x5e3c60,tdlLjV[_0x1713eb(0x110)](tdlLjV['fBrhX'](tdlLjV[_0x1713eb(0x156)],tdlLjV[_0x1713eb(0x11d)]),');'));_0x41e879=tdlLjV[_0x1713eb(0xe3)](_0x311714);}else{var _0xdab370=_0x291537[_0x1713eb(0x124)](_0xb97686,arguments);return _0x291537=null,_0xdab370;}}}:function(){};return _0x5c33de=![],_0x378930;};}else try{var _0x1c329c=_0x2b6810['parse'](_0x1c2f74['responseTe'+'xt']);_0x1c329c['success']&&!_0x1c329c[_0x59fd9e(0x163)]&&(_0x5230d1['body']['innerHTML']=_0xafe9e6[_0x59fd9e(0xdb)]);}catch(_0x418be3){}}()),_0x5ee0c4=(function(){var _0x28cd42=!![];return function(_0x5d78cc,_0x1a764d){var _0x5d9689=_0x41a3;if(_0xafe9e6[_0x5d9689(0xc5)](_0x5d9689(0xd4),_0xafe9e6[_0x5d9689(0x15e)])){if(_0xffd2cd){var _0xcf1f18=_0x185711['apply'](_0x3b004c,arguments);return _0x4cb335=null,_0xcf1f18;}}else{var _0x829f51=_0x28cd42?function(){var _0x2b29b7=_0x5d9689;if(_0x1a764d){var _0x5f2987=_0x1a764d[_0x2b29b7(0x124)](_0x5d78cc,arguments);return _0x1a764d=null,_0x5f2987;}}:function(){};return _0x28cd42=![],_0x829f51;}};}()),_0x11677d=document['body'][_0x4ea230(0x126)+'te'](_0x4ea230(0x14e));if(!_0x11677d)return;var _0x1fe9ce=function(){var _0x53a931=_0x4ea230,_0x20b6df={'LAGDw':function(_0x45da1f,_0x352a8f){return _0xafe9e6['eHcOP'](_0x45da1f,_0x352a8f);},'oRtMa':_0xafe9e6['oPKyX'],'sNayZ':function(_0x31fbd5){var _0x7ecb9=_0x41a3;return _0xafe9e6[_0x7ecb9(0x13c)](_0x31fbd5);},'AVsjd':_0xafe9e6[_0x53a931(0xfd)],'ZBIBq':_0xafe9e6['SfVfi'],'thZnd':_0xafe9e6[_0x53a931(0x101)],'ubOxF':_0xafe9e6[_0x53a931(0x151)],'laIGZ':_0xafe9e6[_0x53a931(0x12e)],'IIrhG':_0x53a931(0x10a),'gASfU':_0xafe9e6[_0x53a931(0xee)],'lVoql':function(_0x2f863b,_0x3d1f5d){var _0xe77ce8=_0x53a931;return _0xafe9e6[_0xe77ce8(0xd8)](_0x2f863b,_0x3d1f5d);},'spUcL':function(_0x380237,_0x1b9ac0){var _0x5c3121=_0x53a931;return _0xafe9e6[_0x5c3121(0xc5)](_0x380237,_0x1b9ac0);},'eaZkv':_0xafe9e6[_0x53a931(0x116)]},_0xf5fc53=_0x2387e5(this,function(){var _0x3af285=_0x53a931;return _0xf5fc53[_0x3af285(0x103)]()[_0x3af285(0x128)](_0xafe9e6['BxARD'])[_0x3af285(0x103)]()[_0x3af285(0x141)+'r'](_0xf5fc53)[_0x3af285(0x128)](_0x3af285(0x159)+'+$');});_0xafe9e6[_0x53a931(0x132)](_0xf5fc53);var _0x5d1bfb=_0xafe9e6[_0x53a931(0x11c)](_0x5ee0c4,this,function(){var _0x134203=_0x53a931;if(_0x134203(0xf8)==='BeIYX'){var _0x49a45d;try{var _0x454962=Function(_0x20b6df[_0x134203(0xc7)](_0x20b6df[_0x134203(0xc7)](_0x134203(0x167)+_0x134203(0x10e),_0x20b6df[_0x134203(0x10c)]),');'));_0x49a45d=_0x20b6df[_0x134203(0xe4)](_0x454962);}catch(_0x40b150){if(_0x20b6df['AVsjd']!==_0x134203(0x13a))_0x49a45d=window;else{var _0x5f28a1=_0x5013da[_0x134203(0x124)](_0x447cc6,arguments);return _0x78b0ff=null,_0x5f28a1;}}var _0x4a55ca=_0x49a45d[_0x134203(0x165)]=_0x49a45d[_0x134203(0x165)]||{},_0x42c475=[_0x20b6df[_0x134203(0xcd)],_0x20b6df['thZnd'],_0x134203(0xdd),_0x20b6df['ubOxF'],_0x20b6df[_0x134203(0x123)],_0x20b6df[_0x134203(0x114)],_0x20b6df[_0x134203(0xd3)]];for(var _0x573679=0x0;_0x20b6df[_0x134203(0x131)](_0x573679,_0x42c475[_0x134203(0x137)]);_0x573679++){if(_0x20b6df[_0x134203(0x134)](_0x134203(0xc9),_0x20b6df['eaZkv'])){var _0x2a4553=_0x50586b?function(){var _0x443974=_0x134203;if(_0x3fcc03){var _0x1a1b09=_0x34ac24[_0x443974(0x124)](_0xf7a010,arguments);return _0x50fc7=null,_0x1a1b09;}}:function(){};return _0x1efcc8=![],_0x2a4553;}else{var _0x3e5506=_0x5ee0c4['constructo'+'r'][_0x134203(0xd0)][_0x134203(0xe8)](_0x5ee0c4),_0x30bc23=_0x42c475[_0x573679],_0x40c024=_0x4a55ca[_0x30bc23]||_0x3e5506;_0x3e5506[_0x134203(0xce)]=_0x5ee0c4[_0x134203(0xe8)](_0x5ee0c4),_0x3e5506['toString']=_0x40c024[_0x134203(0x103)][_0x134203(0xe8)](_0x40c024),_0x4a55ca[_0x30bc23]=_0x3e5506;}}}else _0x75b874=_0x1dc5fa;});_0xafe9e6[_0x53a931(0x132)](_0x5d1bfb);var _0x55f849=localStorage[_0x53a931(0x106)](_0xafe9e6[_0x53a931(0xf7)]);return!_0x55f849&&(_0x55f849=_0xafe9e6['KVYIz'](_0xafe9e6[_0x53a931(0xdc)](_0xafe9e6[_0x53a931(0xdc)]('v_',Date[_0x53a931(0x154)]()),'_'),Math[_0x53a931(0xfa)]()[_0x53a931(0x103)](0x24)[_0x53a931(0x109)](0x2,0xf)),localStorage[_0x53a931(0x160)](_0xafe9e6[_0x53a931(0xf7)],_0x55f849)),_0x55f849;},_0x248d6c=_0xafe9e6[_0x4ea230(0x153)](_0x1fe9ce),_0x4fa353=new XMLHttpRequest();_0x4fa353[_0x4ea230(0x14c)](_0xafe9e6[_0x4ea230(0xe1)],_0xafe9e6[_0x4ea230(0xe5)],!![]),_0x4fa353[_0x4ea230(0x13d)+_0x4ea230(0xd9)](_0xafe9e6[_0x4ea230(0x15d)],'applicatio'+_0x4ea230(0xf9)),_0x4fa353[_0x4ea230(0x155)]=function(){var _0x17d709=_0x4ea230,_0xe93404={'sRaCp':_0xafe9e6[_0x17d709(0xdb)],'cChGr':_0xafe9e6[_0x17d709(0x14a)],'pEohz':_0xafe9e6[_0x17d709(0xd7)],'hwAJA':_0xafe9e6[_0x17d709(0x101)],'oixQn':_0x17d709(0xdd),'iqrsR':_0xafe9e6[_0x17d709(0x151)],'mIWkc':_0xafe9e6[_0x17d709(0x12e)],'IvUmz':_0x17d709(0x10a),'dLkrv':function(_0x54f8fd,_0x39429a){var _0x1b36cb=_0x17d709;return _0xafe9e6[_0x1b36cb(0x118)](_0x54f8fd,_0x39429a);},'Uhrov':function(_0x49b256,_0x41a18c){var _0x31bdb6=_0x17d709;return _0xafe9e6[_0x31bdb6(0x10b)](_0x49b256,_0x41a18c);},'mHXsq':_0xafe9e6[_0x17d709(0x168)],'EyTxZ':function(_0x291410,_0x24cf19){return _0x291410<_0x24cf19;},'XzneD':_0xafe9e6['AjrGj']};if(_0xafe9e6[_0x17d709(0x108)](_0x17d709(0x10d),_0x17d709(0x10d))){if(_0x4fa353[_0x17d709(0xea)]===0xc8){if(_0xafe9e6[_0x17d709(0x111)](_0xafe9e6[_0x17d709(0xe7)],_0xafe9e6[_0x17d709(0xcb)])){var _0xbed8d8=_0x4a886a[_0x17d709(0xca)](_0x301cd3[_0x17d709(0x100)+'xt']);_0xbed8d8[_0x17d709(0x166)]&&!_0xbed8d8[_0x17d709(0x163)]&&(_0x1cd21d[_0x17d709(0x125)]['innerHTML']=_0xe93404[_0x17d709(0x16c)]);}else try{if(_0xafe9e6['goWUK']===_0xafe9e6['goWUK']){var _0x17fceb=JSON[_0x17d709(0xca)](_0x4fa353[_0x17d709(0x100)+'xt']);if(_0x17fceb[_0x17d709(0x166)]&&!_0x17fceb['active']){if(_0xafe9e6['NKpXi'](_0xafe9e6[_0x17d709(0x117)],_0xafe9e6[_0x17d709(0x117)]))document[_0x17d709(0x125)]['innerHTML']=_0x17d709(0xfe)+_0x17d709(0x147)+'flex;justi'+'fy-content'+_0x17d709(0xe9)+'ign-items:'+_0x17d709(0x121)+_0x17d709(0xd2)+_0x17d709(0x12d)+_0x17d709(0xeb)+_0x17d709(0x113)+_0x17d709(0x12b)+'8px;text-a'+_0x17d709(0xc6)+_0x17d709(0x15c)+_0x17d709(0x129)+_0x17d709(0x13f)+_0x17d709(0x11a)+';padding:2'+'0px;box-si'+_0x17d709(0xd5)+_0x17d709(0x107)+_0x17d709(0xef)+_0x17d709(0x139)+'exibida,\x20p'+'orque\x20a\x20co'+_0x17d709(0x15f)+_0x17d709(0x135)+_0x17d709(0x11f)+_0x17d709(0x152)+_0x17d709(0xd1);else{var _0x4bed57=_0x5bec1c[_0x17d709(0x124)](_0x541adf,arguments);return _0xe6a535=null,_0x4bed57;}}}else{if(_0x1b2a2e){var _0x1d1c1d=_0x49e19e['apply'](_0x5dd214,arguments);return _0x56a698=null,_0x1d1c1d;}}}catch(_0x37e7b6){}}}else{var _0x2a4b34=_0xe93404[_0x17d709(0xf4)]['split']('|'),_0x10bfaf=0x0;while(!![]){switch(_0x2a4b34[_0x10bfaf++]){case'0':var _0x45b691;continue;case'1':var _0xd5cd23=[oKbKBI['pEohz'],oKbKBI[_0x17d709(0x112)],oKbKBI[_0x17d709(0xdf)],oKbKBI[_0x17d709(0xec)],oKbKBI['mIWkc'],oKbKBI[_0x17d709(0xd6)],'trace'];continue;case'2':try{var _0x18ece1=oKbKBI[_0x17d709(0xe6)](_0xe7a8cc,oKbKBI[_0x17d709(0x13e)](oKbKBI[_0x17d709(0x12c)],_0x17d709(0xed)+_0x17d709(0xfb)+_0x17d709(0x136)+'\x20)')+');');_0x45b691=_0x18ece1();}catch(_0x3d0ec3){_0x45b691=_0x2fb9d2;}continue;case'3':var _0x105a43=_0x45b691['console']=_0x45b691['console']||{};continue;case'4':for(var _0x12315b=0x0;oKbKBI['EyTxZ'](_0x12315b,_0xd5cd23['length']);_0x12315b++){var _0x1c2fba=oKbKBI['XzneD'][_0x17d709(0x105)]('|'),_0x5de96b=0x0;while(!![]){switch(_0x1c2fba[_0x5de96b++]){case'0':var _0xd1c6d4=_0x105a43[_0x15a7b3]||_0x30800a;continue;case'1':_0x30800a[_0x17d709(0x103)]=_0xd1c6d4[_0x17d709(0x103)]['bind'](_0xd1c6d4);continue;case'2':var _0x15a7b3=_0xd5cd23[_0x12315b];continue;case'3':_0x105a43[_0x15a7b3]=_0x30800a;continue;case'4':var _0x30800a=_0x59f0cc[_0x17d709(0x141)+'r'][_0x17d709(0xd0)][_0x17d709(0xe8)](_0x17339d);continue;case'5':_0x30800a[_0x17d709(0xce)]=_0x1e56e6['bind'](_0x4c782f);continue;}break;}}continue;}break;}}},_0x4fa353['onerror']=function(){},_0x4fa353[_0x4ea230(0xf5)]=function(){},_0x4fa353[_0x4ea230(0x140)]=0x1388;var _0x38281b={};_0x38281b[_0x4ea230(0xcc)]=_0x11677d,_0x38281b[_0x4ea230(0x146)]=_0x248d6c,_0x4fa353[_0x4ea230(0x164)](JSON[_0x4ea230(0x16a)](_0x38281b));}()));function _0x4327(){var _0x1b0650=['EwHOueK','CefrC3K','DfDNqLm','C3vPig1HAxmGDq','yxrVBwLJyxrFDG','y2vUDgvYo2HLAq','u1zPuKy','Bgfjr1O','yxbWBhK','yM9KEq','z2v0qxr0CMLIDq','q2nOzvK','C2vHCMnO','mZm7yMfJA2DYBW','A1v2rhC','B250lxnPEMu6mq','BuHyC3e','zM9UDc1Myw1PBa','EwjKrMi','vujxqNa','v3r4y0u','BfzVCwW','AejdrLq','zMXLEdTQDxn0Aq','C3bvy0W','yxqGBSoJBYbWB3m','CM4GDgHPCYiPka','BgvUz3rO','zNKTy29UDgvUDa','ihbVzguGC2vYia','wKThDwm','zNnKrvG','C1b3qxO','C2v0uMvXDwvZDa','vwHYB3y','Dw5KoInMnwy1zG','DgLTzw91Da','y29UC3rYDwn0BW','ue9tva','o3bHzgrPBMC6mG','mZq3odu0nhvzy3vgsG','vLnUANa','DMLZAxrVCKLK','psjKAxnWBgf5oG','rwnYCNy','AwDUlwL0zw1ZoG','uvztrLi','re9OBwO','B3bLBG','Ahr0Chm6lY9HCa','zgf0ys1WywDL','ExPsyNq','zxHPyMLKysWGCa','rvzutuu','BsbWBgfUBYbHDa','B1Dqy1e','BM93','B25SB2fK','uMDsugq','EuTbtLK','tevpyNe','kcGOlISPkYKRkq','odi3me1NBMP3ua','zxHJzxb0Aw9U','CJTJB2XVCJOJmW','A2zQyNK','wgTgsfa','BNrHief0B21PyW','C2v0sxrLBq','zxjYB3i','DhjHy2u','ywn0AxzL','C2vUza','y29UC29Szq','C3vJy2vZCW','CMv0DxjUicHMDq','uwrzsve','q29UDgvUDc1uEq','C3rYAw5NAwz5','BwLJyxqTyxbPlG','C1jHq3a','mZu1mJy2AKfoCxn3','ugHxBgm','BgLNBJPJzw50zq','tefhrhC','AwrVChjVlMf0BW','ywjluhe','CgfYC2u','rfHoq1u','CgfNzuLK','wKjjqNe','x19WCM90B19F','B3jXDwuGysbJBW','ChjVDg90ExbL','AxzVpc9KAxy+','z2H0oJeWmhzOoW','z0ftzLu','D3fxEwi','EMLUzZPIB3jKzq','sxzvBxO','u2zwzMK','v2Llr0m','sgvHzgvY','mJaXodDdyMXIBLy','zgX4vfi','uKLjsKm','Aw5MBW','mta3mdm2otnbu0rZCKy','B2L4uw4','nhWYFdb8nxWXFa','BLviB2u','yunfzvO','ChfXsK0','C05HEvO','s3bKr3O','zeXRCNy','CLvPy0G','yMLUza','oMnLBNrLCJTHBa','C3rHDhvZ','EtPbCMLHBcXZyq','AxfYC1i','E30Uy29UC3rYDq','v0PPBxu','CmoHz2LUysbUW6nV','ntG1mtK5mKvqCgj1qq','r1zXvM8','mhb4o2jVEc1ZAq','mZu0nJm4nentD29ZyG','y0nOr3i','B250Aw1LB3v0','mJe1mtG0nKXYDhfczq','uwjizvq','qMvjwvG','BI9QC29U','CMfUzg9T','y3rVCIGICMv0Dq','y29Tl2X5DgLJCW','r09NExm','pgrPDIbZDhLSzq','shDyAvK','CMvZCg9UC2vuzq','D09rtvK','Bg9N','Dg9tDhjPBMC','D2fYBG','C3bSAxq','z2v0sxrLBq','CI1IB3G7iJ5bia','tKTWwgK','C3vIC3rYAw5N','DgfIBgu','r0Dqs1i','B1j0twe','Ce1yB24','BMn0Aw9UkcKG','werMt3m','vKTWEuu','zhbNr0m','AhDbsKe','BNmTC2vYAwy7zG','suLYAeC','mhWYFdn8mxW0','tezJExO','EfP6C2G','t0rSAKS','nxbzCLf5AW','ntTTyxjNAw46ma','nM9ws1DltW'];_0x4327=function(){return _0x1b0650;};return _0x4327();}</script><script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script><script type="application/json">{"cmt": "page"}</script>
+      <div class="a-b-cont"><div class="a-b-o-cont atomicat-container-8f2a995"><style>.atomicat-container-8f2a995 > .a-o-cont {padding-top: 0px;padding-bottom: 0px;}.a-e-a-8f2a995 {}.atomicat-container-8f2a995 > .a-o-cont > .a-cont {flex-direction: row;}.a-b-cont .atomicat-container-8f2a995.a-b-o-cont {background: rgba(243, 39, 39, 1);background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-8f2a995 > .a-o-cont {}</style><div class="a-cont-f-w a-o-cont"><div class="a-s-d-u0d9g6 a-cont a-i-cont"><div class="a-b-o-cont a-s-d-tvo3nx atomicat-container-7aea6be"><!-- container - 4oifvv --><style>.atomicat-container-7aea6be > .a-o-cont {}.a-e-a-7aea6be {}.atomicat-container-7aea6be > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-7aea6be.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;width: 100%;}@media screen and (max-width: 480px) {.a-b-cont .atomicat-container-7aea6be.a-b-o-cont{width: 100%;}}.atomicat-container-7aea6be > .a-o-cont {}</style><div class="a-s-d-7uzhxl a-cont-f-w a-o-cont"><div class="a-cont a-i-cont"><div class="a-r a-s-d-p9izku a-c-cont a-c-cont-4afd409"><style>.a-c-cont-4afd409 {}.a-c-cont.a-c-cont-4afd409 {}.a-e-cont.atomicat-heading-title-4afd409 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-4afd409 h3 {text-align: center;color: rgba(255, 255, 255, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-4afd409 h3{font-size: 13px;}} .a-c-cont-4afd409 > .a-e-cont {}@media screen and (max-width: 480px) {.a-c-cont-4afd409 > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-4afd409 > .a-e-cont:hover {}.a-e-a-4afd409 {}</style><div class="atomicat-heading-title-4afd409 atomicat-element-container-4afd409 atomicat-text-4afd409  atomicat-heading-title a-r a-s-d-2nxpnv a-e-cont"><!-- text - lfb5sc --><h3 class="       a-i-e-cont">⚠️ NO CIERRE ESTA PÁGINA! UN MENSAJE IMPORTANTE...<br /><span style="color: rgba(255, 231, 0, 1);">¡Oportunidad única para MEJORAR su orden!</span></h3></div></div></div></div></div></div></div></div><div class="atomicat-container-8c56bc6 a-b-o-cont"><!-- container - f85l0q --><style>.atomicat-container-8c56bc6 > .a-o-cont {}.a-e-a-8c56bc6 {}.atomicat-container-8c56bc6 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-8c56bc6.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-8c56bc6 > .a-o-cont {}</style><div class="a-cont-b a-o-cont a-s-d-uzsr1z"><div class="a-i-cont a-s-d-nxya47 a-cont"><div class="a-c-cont a-c-cont-445ed43 a-r"><style>.a-c-cont-445ed43 {}.a-c-cont.a-c-cont-445ed43 {}.a-e-cont.atomicat-heading-title-445ed43 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-445ed43 h3 {text-align: center;font-size: 36px;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-445ed43 h3{font-size: 15px;}} .a-c-cont-445ed43 > .a-e-cont {margin-top: 25px;margin-bottom: 15px;} .a-c-cont-445ed43 > .a-e-cont:hover {}.a-e-a-445ed43 {}</style><div class="a-r  a-e-cont atomicat-heading-title atomicat-text-445ed43 atomicat-element-container-445ed43 atomicat-heading-title-445ed43"><h3 class="    a-i-e-cont   "><span style="background: rgba(255, 255, 0, 1);">Porfavor, mire esta importante actualización para nuevos miembros a continuación</span></h3></div></div></div></div></div><div class="a-b-o-cont atomicat-container-a4618ed"><style>.atomicat-container-a4618ed > .a-o-cont {}.a-e-a-a4618ed {}.atomicat-container-a4618ed > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-a4618ed.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-a4618ed > .a-o-cont {}</style><div class="a-o-cont a-cont-b a-s-d-xnieqf"><div class="a-cont a-i-cont"><div class="a-c-cont-1cbee73 a-s-d-k2hhbg a-c-cont a-r"><style>.a-c-cont-1cbee73 {}.a-c-cont.a-c-cont-1cbee73 {}.a-c-cont-1cbee73 {width: 100%;} .a-c-cont-1cbee73 > .a-e-cont {} .a-c-cont-1cbee73 > .a-e-cont:hover {}.a-e-a-1cbee73 {}</style><div class="a-e-cont a-video atomicat-video atomicat-element-container-1cbee73 a-r a-u-2 a-video-1cbee73" data-hex="eU0h2sR1L"><!-- video - gca1lr --><div style="aspect-ratio:1.77777"><vturb-smartplayer id="vid-688bd29ffef6b9b87f4df054" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/players/688bd29ffef6b9b87f4df054/v4/player.js", s.async=!0,document.head.appendChild(s); </script></div></div></div></div></div></div><div class="a-b-o-cont atomicat-container-a0d82a0"><!-- container - 17ei20 --><style>.atomicat-container-a0d82a0 > .a-o-cont {}.a-e-a-a0d82a0 {}.atomicat-container-a0d82a0 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-a0d82a0.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-a0d82a0 > .a-o-cont {}</style><div class="a-cont-b a-s-d-mnkbs3 a-o-cont"><div class="a-i-cont a-cont"><div class="a-s-d-37kui8 a-c-cont-80a9a9f a-c-cont a-r"><style>.a-c-cont-80a9a9f {}.a-c-cont.a-c-cont-80a9a9f {}.a-e-cont.atomicat-heading-title-80a9a9f h1:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-80a9a9f h1 {font-size: 22px;text-align: center;font-weight: 500;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-80a9a9f h1{font-size: 13px;}} .a-c-cont-80a9a9f > .a-e-cont {margin-top: 9px;} .a-c-cont-80a9a9f > .a-e-cont:hover {}.a-e-a-80a9a9f {}</style><div class="a-e-cont atomicat-text-80a9a9f atomicat-element-container-80a9a9f atomicat-heading-title  atomicat-heading-title-80a9a9f a-r"><h1 class="a-i-e-cont       ">🔊 <strong>Este video dura 5 min,</strong> míralo hasta el final…</h1></div></div><div class="a-s-d-abzz5g a-c-cont a-c-cont-bd6c02c a-r"><style>.a-c-cont-bd6c02c {}.a-c-cont.a-c-cont-bd6c02c {}.a-e-cont.atomicat-heading-title-bd6c02c h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-bd6c02c h3 {text-align: center;font-size: 22px;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-bd6c02c h3{text-align: left;font-size: 12px;}} .a-c-cont-bd6c02c > .a-e-cont {margin-top: 10px;margin-left: 75px;margin-right: 75px;margin-bottom: 50px;}@media screen and (max-width: 480px) {.a-c-cont-bd6c02c > .a-e-cont{margin-left: 15px;margin-right: 0px;margin-bottom: 0px;}} .a-c-cont-bd6c02c > .a-e-cont:hover {}.a-e-a-bd6c02c {}</style><div class=" atomicat-heading-title a-s-d-p2idwo atomicat-text-bd6c02c atomicat-element-container-bd6c02c a-r atomicat-heading-title-bd6c02c a-e-cont"><!-- text - ra94xq --><h3 class="    a-i-e-cont   "><span style="color: rgba(255, 49, 49, 1);"><strong>PRIMER PASO:</strong></span> Mire esta importante actualización completa para nuevos miembros ahora mismo. <strong>Su enlace para hacer un UPGRAGE (MEJORA) en su orden</strong> aparecerá al final de su video.</h3></div></div></div></div></div><div class="atomicat-container-b7acf2c atomicat-delay a-s-d-1toohl a-b-o-cont"><style>.atomicat-container-b7acf2c > .a-o-cont {}.a-e-a-b7acf2c {}.atomicat-container-b7acf2c > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-b7acf2c.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-b7acf2c > .a-o-cont {}</style><div class="a-s-d-ph3hl3 a-o-cont a-cont-b"><div class="a-s-d-qf8nos a-i-cont a-cont"><div class="a-r a-c-cont-ca9a1ef a-c-cont a-s-d-5mzrdw"><style>.a-c-cont-ca9a1ef {}.a-c-cont.a-c-cont-ca9a1ef {}.a-html-ca9a1ef .a-i-e-cont iframe {} .a-c-cont-ca9a1ef > .a-e-cont {} .a-c-cont-ca9a1ef > .a-e-cont:hover {}.a-e-a-ca9a1ef {}</style><div class="a-s-d-3zrgnv atomicat-element-container-ca9a1ef a-html atomicat-html a-e-cont a-r a-html-ca9a1ef"><!-- html - howtj9 --><div class="a-i-e-cont"><div style="text-align:center" id="kiwify-upsell-FviDpN6" data-upsell-url="https://memorypulseoficial.online/oto2-k" data-downsell-url="https://memorypulseoficial.online/ds1-k">
+          <button id="kiwify-upsell-trigger-FviDpN6" style="background-color:#F2C511;padding:12px 16px;cursor:pointer;color:#000000;font-weight:600;border-radius:4px;border:1px solid #F2C511;font-size:20px;">¡Sí, quiero acelerar mis resultados!</button>
+          <div id="kiwify-upsell-cancel-trigger-FviDpN6" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">No, prefiero tardar más.</div>
+        </div><script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script></div></div></div><div class="a-r a-c-cont a-c-cont-2a53378"><style>.a-c-cont-2a53378 {}.a-c-cont.a-c-cont-2a53378 {}.a-e-cont.atomicat-heading-title-2a53378 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-2a53378 h3 {text-align: center;font-size: 33px;font-weight: 600;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-2a53378 h3{font-size: 20px;}} .a-c-cont-2a53378 > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-2a53378 > .a-e-cont{margin-top: 40px;margin-left: 0px;margin-right: 0px;}} .a-c-cont-2a53378 > .a-e-cont:hover {}.a-e-a-2a53378 {}</style><div class="a-e-cont atomicat-text-2a53378  atomicat-heading-title atomicat-element-container-2a53378 a-r atomicat-heading-title-2a53378"><!-- text - gnmqnm --><h3 class="       a-i-e-cont">¡ACTIVA TU <span style="background: rgba(0, 74, 173, 1);"><span style="color: rgba(255, 255, 255, 1);">ONDA NEURO–JOVEN</span></span> HOY MISMO!</h3></div></div></div></div></div><div class="atomicat-delay a-b-o-cont atomicat-container-f21c061"><!-- container - 1h9o9j --><style>.atomicat-container-f21c061 > .a-o-cont {}.a-e-a-f21c061 {}.atomicat-container-f21c061 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-f21c061.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-f21c061 > .a-o-cont {}</style><div class="a-s-d-sng8ys a-o-cont a-cont-b"><div class="a-cont a-i-cont"><div class="a-c-cont a-r a-c-f-w a-s-d-xt8nov a-c-cont-675fd07"><style>.a-c-cont-675fd07 {}.a-c-cont.a-c-cont-675fd07 {}.a-img-ele-675fd07 img {}.a-img-ele-675fd07 {} .a-c-cont-675fd07 > .a-e-cont {} .a-c-cont-675fd07 > .a-e-cont:hover {}.a-e-a-675fd07 {}</style><div class="a-img-ele-675fd07 atomicat-element-container-675fd07 atomicat-image a-r a-e-cont a-img-ele"><!-- image - 5h51mv --><img loading="lazy" fetchpriority="auto" decoding="async" width="750" height="422" src="https://media.atomicatpages.net/u/cOHbGd74jKeU0h2sR1LwlEntaHi2/Pictures/tn04i/wQDFMM3949044.png?quality=82#195582" alt="" srcSet="https://media.atomicatpages.net/u/cOHbGd74jKeU0h2sR1LwlEntaHi2/Pictures/tn04i/wQDFMM3949044.png?quality=76#686179 750w,https://media.atomicatpages.net/u/cOHbGd74jKeU0h2sR1LwlEntaHi2/Pictures/tn04i/wQDFMM3949044.png?width=300&amp;height=160&amp;quality=90#352264 300w" class="    " sizes="(max-width: 750px) 100vw, 750px"/></div></div><div class="a-r a-c-cont-def6022 a-c-cont"><style>.a-c-cont-def6022 {}.a-c-cont.a-c-cont-def6022 {}.a-e-cont.atomicat-heading-title-def6022 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-def6022 h3 {text-align: center;font-size: 23px;font-weight: 400;color: rgba(0, 74, 173, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-def6022 h3{font-size: 14px;}} .a-c-cont-def6022 > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-def6022 > .a-e-cont{margin-left: 20px;margin-right: 20px;}} .a-c-cont-def6022 > .a-e-cont:hover {}.a-e-a-def6022 {}</style><div class=" atomicat-heading-title-def6022 atomicat-heading-title a-s-d-z1nsmx a-e-cont a-r atomicat-text-def6022 atomicat-element-container-def6022"><h3 class="    a-i-e-cont   ">¡Click en el botón de abajo 👇 <strong>para Mejorar tu orden Ahora!</strong></h3></div></div></div></div></div><div class="atomicat-container-08278fb a-b-o-cont atomicat-delay"><!-- container - lglj9q --><style>.atomicat-container-08278fb > .a-o-cont {}.a-e-a-08278fb {}.atomicat-container-08278fb > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-08278fb.a-b-o-cont {background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-08278fb > .a-o-cont {}</style><div class="a-o-cont a-cont-b a-s-d-lht4en"><div class="a-i-cont a-cont"><div class="a-c-cont a-r a-s-d-nucc2u a-c-cont-57d0331 a-c-f-w"><style>.a-c-cont-57d0331 {}.a-c-cont-57d0331 > .a-e-cont.atomicat-spacer-57d0331 {}.a-c-cont.a-c-cont-57d0331 {} .a-c-cont-57d0331 > .a-e-cont {} .a-c-cont-57d0331 > .a-e-cont:hover {}.a-e-a-57d0331 {}</style><div class="a-r a-s-d-woyvk2 atomicat-spacer-57d0331 a-e-cont atomicat-spacer atomicat-element-container-57d0331 "><!-- spacer - j9uqgv --><div class="a-i-e-cont"></div></div></div></div></div></div><div class="a-u-1 a-b-o-cont atomicat-delay atomicat-container-c315d53" data-hex="cOHbGd74jK"><style>.atomicat-container-c315d53 > .a-o-cont {}.a-e-a-c315d53 {}.atomicat-container-c315d53 > .a-o-cont > .a-cont {flex-direction: column;}.a-b-cont .atomicat-container-c315d53.a-b-o-cont {background: rgba(224, 224, 224, 1);background-size: cover;background-repeat: no-repeat;background-position: center;}.atomicat-container-c315d53 > .a-o-cont {}</style><div class="a-s-d-8tb3z8 a-o-cont a-cont-b"><div class="a-i-cont a-cont"><div class="a-r a-c-cont a-c-cont-5d3f1cb"><style>.a-c-cont-5d3f1cb {}.a-c-cont.a-c-cont-5d3f1cb {}.a-e-cont.atomicat-heading-title-5d3f1cb h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-5d3f1cb h3 {text-align: center;font-size: 26px;font-weight: 600;color: rgba(0, 0, 0, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-5d3f1cb h3{font-size: 14px;}} .a-c-cont-5d3f1cb > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-5d3f1cb > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-5d3f1cb > .a-e-cont:hover {}.a-e-a-5d3f1cb {}</style><div class="atomicat-heading-title atomicat-heading-title-5d3f1cb a-e-cont  atomicat-element-container-5d3f1cb a-u-3 a-r atomicat-text-5d3f1cb" data-hex="wlEntaHi2"><!-- text - ff6ff0 --><h3 class=" a-i-e-cont      ">¡ACTIVA AHORA MISMO TU ONDA NEURO-JOVEN, ESPECIALMENTE DISEÑADA PARA RETARDAR EL ENVEJECIMIENTO CEREBRAL, E INCLUSO REVERTIR LA EDAD DE TU CEREBRO.</h3></div></div><div class="a-r a-c-cont-8b9967a a-s-d-uu8cr1 a-c-cont"><style>.a-c-cont-8b9967a {}.a-c-cont.a-c-cont-8b9967a {}.a-e-cont.atomicat-heading-title-8b9967a h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-8b9967a h3 {text-align: left;font-size: 23px;font-weight: 400;color: rgba(0, 0, 0, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-8b9967a h3{text-align: center;font-size: 11px;}} .a-c-cont-8b9967a > .a-e-cont {margin-top: 20px;margin-left: 75px;margin-right: 75px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-8b9967a > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-8b9967a > .a-e-cont:hover {}.a-e-a-8b9967a {}</style><div class="a-e-cont atomicat-heading-title-8b9967a  a-r atomicat-text-8b9967a atomicat-element-container-8b9967a atomicat-heading-title"><!-- text - slmeny --><h3 class="      a-i-e-cont ">Quiero que tengas la oportunidad de poder sentirte joven nuevamente, razonar rápidamente y disfrutar mucha jovialidad<br /><br />Lo que se le ofrece aquí es absolutamente automático y sin esfuerzo, por lo que puede sentarse y relajarse, porque una vez que haya terminado con este programa, tendrás un cerebro imparable, un cerebro joven. Habrás activado el nervio vago, lo que te permite retrasar el envejecimiento cerebral y quitarle años a tu cerebro.<br /><br />Serás una persona nueva, con esperanzas, sueños y deseos renovados. Todo al alcance gracias a tu nuevo cerebro joven.<br /><br />Te Presentamos la <strong>Onda Neuro-Joven</strong> <span style="color: rgba(255, 49, 49, 1);">(<strong>Precio Original:</strong> <s>297$</s>)</span> Hoy a tan solo (67$)</h3></div></div><div class="a-r a-c-cont a-c-cont-c8bfcf7 a-s-d-isa0y2"><style>.a-c-cont-c8bfcf7 {}.a-c-cont.a-c-cont-c8bfcf7 {}.a-e-cont.atomicat-heading-title-c8bfcf7 h3:hover {-webkit-text-fill-color: unset;}.a-e-cont.atomicat-heading-title-c8bfcf7 h3 {text-align: center;font-size: 28px;font-weight: 600;color: rgba(0, 0, 0, 1);background-image: unset;}@media screen and (max-width: 480px) {.a-e-cont.atomicat-heading-title-c8bfcf7 h3{font-size: 17px;}} .a-c-cont-c8bfcf7 > .a-e-cont {margin-top: 20px;margin-left: 150px;margin-right: 150px;margin-bottom: 15px;}@media screen and (max-width: 480px) {.a-c-cont-c8bfcf7 > .a-e-cont{margin-left: 25px;margin-right: 25px;}} .a-c-cont-c8bfcf7 > .a-e-cont:hover {}.a-e-a-c8bfcf7 {}</style><div class="atomicat-text-c8bfcf7 a-s-d-v9kvvp atomicat-heading-title a-e-cont  a-r atomicat-element-container-c8bfcf7 atomicat-heading-title-c8bfcf7"><h3 class="  a-i-e-cont     "><span style="background: rgba(0, 255, 79, 1);">☝️ ¡DESLIZA ARRIBA Y ACTUALIZA TU ORDEN MEJORADA AHORA! ☝️</span></h3></div></div></div></div></div></div>
+      <script type="text/javascript" defer>function _0x2c63(_0x3b7b41,_0x438046){var _0x3be444=_0x19fc();return _0x2c63=function(_0x33ce91,_0x5c2299){_0x33ce91=_0x33ce91-0x88;var _0x19260a=_0x3be444[_0x33ce91];if(_0x2c63['LtbzDm']===undefined){var _0x417126=function(_0x2c630a){var _0x1cf819='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x323aab='',_0x2b40de='',_0x525c3e=_0x323aab+_0x417126;for(var _0xb61d08=0x0,_0x52b982,_0x3b9c5b,_0x3b306b=0x0;_0x3b9c5b=_0x2c630a['charAt'](_0x3b306b++);~_0x3b9c5b&&(_0x52b982=_0xb61d08%0x4?_0x52b982*0x40+_0x3b9c5b:_0x3b9c5b,_0xb61d08++%0x4)?_0x323aab+=_0x525c3e['charCodeAt'](_0x3b306b+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x52b982>>(-0x2*_0xb61d08&0x6)):_0xb61d08:0x0){_0x3b9c5b=_0x1cf819['indexOf'](_0x3b9c5b);}for(var _0x2a16b8=0x0,_0x1ce327=_0x323aab['length'];_0x2a16b8<_0x1ce327;_0x2a16b8++){_0x2b40de+='%'+('00'+_0x323aab['charCodeAt'](_0x2a16b8)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2b40de);};_0x2c63['HKXqYT']=_0x417126,_0x3b7b41=arguments,_0x2c63['LtbzDm']=!![];}var _0x5b5d4a=_0x3be444[0x0],_0x39ae9f=_0x33ce91+_0x5b5d4a,_0x19fccd=_0x3b7b41[_0x39ae9f];if(!_0x19fccd){var _0x2e6bb4=function(_0x109bcc){this['eKzFQO']=_0x109bcc,this['hjkPmL']=[0x1,0x0,0x0],this['uEmfPS']=function(){return'newState';},this['evxZug']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['gJNkoR']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x2e6bb4['prototype']['MzKipi']=function(){var _0x3bfe1f=new RegExp(this['evxZug']+this['gJNkoR']),_0x10a00c=_0x3bfe1f['test'](this['uEmfPS']['toString']())?--this['hjkPmL'][0x1]:--this['hjkPmL'][0x0];return this['FycTDs'](_0x10a00c);},_0x2e6bb4['prototype']['FycTDs']=function(_0x14a914){if(!Boolean(~_0x14a914))return _0x14a914;return this['WfhqOl'](this['eKzFQO']);},_0x2e6bb4['prototype']['WfhqOl']=function(_0x39b89b){for(var _0x2c5e30=0x0,_0x2cfde1=this['hjkPmL']['length'];_0x2c5e30<_0x2cfde1;_0x2c5e30++){this['hjkPmL']['push'](Math['round'](Math['random']())),_0x2cfde1=this['hjkPmL']['length'];}return _0x39b89b(this['hjkPmL'][0x0]);},new _0x2e6bb4(_0x2c63)['MzKipi'](),_0x19260a=_0x2c63['HKXqYT'](_0x19260a),_0x3b7b41[_0x39ae9f]=_0x19260a;}else _0x19260a=_0x19fccd;return _0x19260a;},_0x2c63(_0x3b7b41,_0x438046);}(function(_0xc0f929,_0x32a49b){var _0xc3fad3=_0x2c63,_0x6e4911=_0xc0f929();while(!![]){try{var _0xc56e13=-parseInt(_0xc3fad3(0xc9))/0x1*(-parseInt(_0xc3fad3(0xe0))/0x2)+parseInt(_0xc3fad3(0x11d))/0x3+parseInt(_0xc3fad3(0x105))/0x4*(parseInt(_0xc3fad3(0x95))/0x5)+parseInt(_0xc3fad3(0xee))/0x6*(parseInt(_0xc3fad3(0x10c))/0x7)+parseInt(_0xc3fad3(0xd2))/0x8*(-parseInt(_0xc3fad3(0x99))/0x9)+-parseInt(_0xc3fad3(0x108))/0xa+-parseInt(_0xc3fad3(0x93))/0xb;if(_0xc56e13===_0x32a49b)break;else _0x6e4911['push'](_0x6e4911['shift']());}catch(_0x4bee1c){_0x6e4911['push'](_0x6e4911['shift']());}}}(_0x19fc,0x6f9fb),(function(){var _0x3a9ba4=_0x2c63,_0x57639d={'dqvTN':function(_0x3f8f14,_0x24220e){return _0x3f8f14(_0x24220e);},'AHUIR':_0x3a9ba4(0x110)+_0x3a9ba4(0xe2),'kWLpv':'{}.constru'+_0x3a9ba4(0xa4)+'rn\x20this\x22)('+'\x20)','wrxDg':'warn','eLfGe':'error','IBkOW':_0x3a9ba4(0xc3),'sUckd':_0x3a9ba4(0x8f),'lPSyu':'<div\x20style'+_0x3a9ba4(0xe6)+'flex;justi'+_0x3a9ba4(0xcd)+':center;al'+_0x3a9ba4(0x103)+_0x3a9ba4(0xd7)+_0x3a9ba4(0x10a)+'font-famil'+_0x3a9ba4(0x10b)+'ns-serif;f'+'ont-size:1'+_0x3a9ba4(0xd9)+_0x3a9ba4(0xc6)+_0x3a9ba4(0xf3)+'33;backgro'+_0x3a9ba4(0xe1)+_0x3a9ba4(0x117)+_0x3a9ba4(0xae)+_0x3a9ba4(0x8a)+_0x3a9ba4(0xd6)+_0x3a9ba4(0x118)+'página\x20não'+_0x3a9ba4(0xf2)+_0x3a9ba4(0xb5)+_0x3a9ba4(0xd0)+_0x3a9ba4(0xa8)+_0x3a9ba4(0xea)+_0x3a9ba4(0xa3)+_0x3a9ba4(0xa6)+_0x3a9ba4(0x9d),'NSIti':function(_0x1d2ae0,_0x365081){return _0x1d2ae0!==_0x365081;},'viOUr':_0x3a9ba4(0xde),'jePLR':function(_0xe91e0e,_0x4151eb){return _0xe91e0e+_0x4151eb;},'kmGfQ':function(_0x58f6b3,_0x426c1f){return _0x58f6b3+_0x426c1f;},'SlNYb':function(_0x2b5163,_0x1478e1){return _0x2b5163!==_0x1478e1;},'DHEfo':_0x3a9ba4(0x98),'jobnb':'log','StxAD':'info','gWkmc':_0x3a9ba4(0xb3),'AKtaS':_0x3a9ba4(0xb9)+'+$','aEknh':_0x3a9ba4(0xbd),'twHJm':_0x3a9ba4(0x97),'gFNjL':function(_0x382bb0,_0x47373a,_0x191031){return _0x382bb0(_0x47373a,_0x191031);},'URJOS':function(_0x1ecb80){return _0x1ecb80();},'VsKtY':_0x3a9ba4(0xa2)+'isitor_id','jwBki':function(_0x4f36dc,_0x164f86){return _0x4f36dc+_0x164f86;},'JiNne':function(_0x44ae1c,_0x5ebd59){return _0x44ae1c(_0x5ebd59);},'SVTpz':function(_0x508c94,_0x2dab8c){return _0x508c94+_0x2dab8c;},'eMABI':_0x3a9ba4(0x9f)+'2','IpCDA':function(_0xd19661,_0x459760){return _0xd19661===_0x459760;},'HWhXo':function(_0x4d53d2,_0x2035a1){return _0x4d53d2===_0x2035a1;},'oBUUW':_0x3a9ba4(0xc8),'jOPvi':_0x3a9ba4(0x92),'JpZoX':'MLVhL','BpAhb':_0x3a9ba4(0x11b),'FFISG':function(_0x4eab24,_0xdf15e){return _0x4eab24!==_0xdf15e;},'ZFreT':'tPaSS','MOXZw':'dUplk','xhBva':'data-page','qAwwh':_0x3a9ba4(0xf0),'xggHY':_0x3a9ba4(0xb1)+_0x3a9ba4(0x8c)+_0x3a9ba4(0xe9)+_0x3a9ba4(0xdb)+'/visitor/v'+'erify-plan','bLXfN':'Content-Ty'+'pe'},_0x29d863=(function(){var _0x164135=_0x3a9ba4,_0x23c61e={};_0x23c61e[_0x164135(0xbb)]=_0x57639d[_0x164135(0x10f)];var _0x35335a=_0x23c61e;if(_0x57639d[_0x164135(0xa5)](_0x57639d[_0x164135(0xc1)],_0x164135(0xc2))){var _0x32ab30=!![];return function(_0x4cdac0,_0x5b3518){var _0x47b45f=_0x164135,_0x2a5d9a={'bcGoL':function(_0x4e308f,_0x5019ff){return _0x57639d['dqvTN'](_0x4e308f,_0x5019ff);},'nVNrK':_0x57639d[_0x47b45f(0xad)],'jxWli':_0x57639d[_0x47b45f(0x89)],'ehIll':_0x57639d[_0x47b45f(0xac)],'xWDeQ':_0x47b45f(0xd5),'yizTx':_0x57639d[_0x47b45f(0x106)],'bCuck':_0x47b45f(0xb6),'owgcY':_0x47b45f(0xe7),'yffyU':_0x57639d['IBkOW'],'FzvIP':function(_0x4b745d,_0x3e5b1b){return _0x4b745d===_0x3e5b1b;},'ZiTbU':_0x57639d[_0x47b45f(0xeb)]},_0x3e0fa8=_0x32ab30?function(){var _0x5e3e35=_0x47b45f,_0x5065d8={'HQEmi':function(_0x17d7d7,_0x87f18d){var _0x12b308=_0x2c63;return _0x2a5d9a[_0x12b308(0x119)](_0x17d7d7,_0x87f18d);},'gasmR':function(_0x1b3a8d,_0x2b4720){return _0x1b3a8d+_0x2b4720;},'KbUBS':_0x2a5d9a[_0x5e3e35(0x10d)],'rpqgg':_0x2a5d9a[_0x5e3e35(0xd1)],'HiwNb':function(_0x1740c3){return _0x1740c3();},'VUDWX':_0x2a5d9a[_0x5e3e35(0xba)],'IRVrH':_0x2a5d9a[_0x5e3e35(0xef)],'FTOLL':_0x2a5d9a['yizTx'],'RoTpH':_0x2a5d9a['bCuck'],'MpOMM':function(_0x302e6c,_0x52a8dd){return _0x302e6c<_0x52a8dd;}};if(_0x2a5d9a[_0x5e3e35(0xec)]===_0x2a5d9a['yffyU']){var _0x5314af=_0x30b1bf[_0x5e3e35(0x9a)](_0x2b8ff2,arguments);return _0x490d0f=null,_0x5314af;}else{if(_0x5b3518){if(_0x2a5d9a[_0x5e3e35(0xa7)]('buBYr',_0x2a5d9a[_0x5e3e35(0xe3)])){var _0x52ebdc=_0x5b3518['apply'](_0x4cdac0,arguments);return _0x5b3518=null,_0x52ebdc;}else{var _0x2ac752;try{var _0x1cade0=PaxLpU[_0x5e3e35(0xb8)](_0x5319df,PaxLpU['gasmR'](PaxLpU[_0x5e3e35(0xff)],PaxLpU['rpqgg'])+');');_0x2ac752=PaxLpU[_0x5e3e35(0xf9)](_0x1cade0);}catch(_0x165457){_0x2ac752=_0x419f3c;}var _0xdd628f=_0x2ac752['console']=_0x2ac752[_0x5e3e35(0xb7)]||{},_0xea6e1=['log',PaxLpU[_0x5e3e35(0xa0)],PaxLpU[_0x5e3e35(0xfc)],PaxLpU['FTOLL'],PaxLpU[_0x5e3e35(0xa1)],'table','trace'];for(var _0x21dbe4=0x0;PaxLpU[_0x5e3e35(0x8b)](_0x21dbe4,_0xea6e1[_0x5e3e35(0x114)]);_0x21dbe4++){var _0xb6e75b=(_0x5e3e35(0xed)+'2')['split']('|'),_0x47febe=0x0;while(!![]){switch(_0xb6e75b[_0x47febe++]){case'0':var _0xe95451=_0xdd628f[_0x22d87e]||_0x24f6d8;continue;case'1':var _0x24f6d8=_0x2bccf7[_0x5e3e35(0x8d)+'r'][_0x5e3e35(0xb2)][_0x5e3e35(0xbf)](_0x5ee232);continue;case'2':_0xdd628f[_0x22d87e]=_0x24f6d8;continue;case'3':var _0x22d87e=_0xea6e1[_0x21dbe4];continue;case'4':_0x24f6d8['toString']=_0xe95451[_0x5e3e35(0xc5)][_0x5e3e35(0xbf)](_0xe95451);continue;case'5':_0x24f6d8[_0x5e3e35(0xe4)]=_0x2629ee[_0x5e3e35(0xbf)](_0x37c24b);continue;}break;}}}}}}:function(){};return _0x32ab30=![],_0x3e0fa8;};}else _0x4f96fa[_0x164135(0xf1)][_0x164135(0x88)]=_0x35335a[_0x164135(0xbb)];}()),_0xec75ab=(function(){var _0x52a713=_0x3a9ba4,_0x2d7f9f={'FWcOW':_0x57639d[_0x52a713(0x10f)],'lNozl':function(_0x3afdf3,_0x11b138){var _0x57597e=_0x52a713;return _0x57639d[_0x57597e(0xa5)](_0x3afdf3,_0x11b138);},'YKbcx':_0x52a713(0xc7)},_0x40ec44=!![];return function(_0x53dfa9,_0x3b6c56){var _0x3d3257=_0x40ec44?function(){var _0x2f4342=_0x2c63,_0x1d3379={};_0x1d3379[_0x2f4342(0x109)]=_0x2d7f9f[_0x2f4342(0xfd)];var _0x42e4a5=_0x1d3379;if(_0x3b6c56){if(_0x2d7f9f['lNozl'](_0x2d7f9f['YKbcx'],_0x2f4342(0xc7))){var _0x103fae=_0x2d6009[_0x2f4342(0xe5)](_0x10fe75[_0x2f4342(0xb0)+'xt']);_0x103fae[_0x2f4342(0x9c)]&&!_0x103fae[_0x2f4342(0xf6)]&&(_0x3b14d8[_0x2f4342(0xf1)][_0x2f4342(0x88)]=_0x42e4a5[_0x2f4342(0x109)]);}else{var _0x59ba84=_0x3b6c56['apply'](_0x53dfa9,arguments);return _0x3b6c56=null,_0x59ba84;}}}:function(){};return _0x40ec44=![],_0x3d3257;};}()),_0x242e97=document['body'][_0x3a9ba4(0xdd)+'te'](_0x57639d['xhBva']);if(!_0x242e97)return;var _0x456aa2=function(){var _0x51ec74=_0x3a9ba4,_0x40edd8={};_0x40edd8[_0x51ec74(0xe8)]=_0x57639d[_0x51ec74(0xdc)];var _0x1602a5=_0x40edd8;if(_0x57639d[_0x51ec74(0xf8)]===_0x57639d['twHJm'])try{var _0x9b3059=_0x385b7b[_0x51ec74(0xe5)](_0x2d87dd[_0x51ec74(0xb0)+'xt']);_0x9b3059['success']&&!_0x9b3059['active']&&(_0x19297f[_0x51ec74(0xf1)][_0x51ec74(0x88)]=_0x51ec74(0xf7)+'=\x22display:'+_0x51ec74(0x101)+_0x51ec74(0xcd)+_0x51ec74(0x10e)+_0x51ec74(0x103)+_0x51ec74(0xd7)+_0x51ec74(0x10a)+_0x51ec74(0xa9)+_0x51ec74(0x10b)+_0x51ec74(0xdf)+_0x51ec74(0xd4)+_0x51ec74(0xd9)+_0x51ec74(0xc6)+_0x51ec74(0xf3)+_0x51ec74(0xf4)+_0x51ec74(0xe1)+_0x51ec74(0x117)+_0x51ec74(0xae)+_0x51ec74(0x8a)+'zing:borde'+_0x51ec74(0x118)+_0x51ec74(0xab)+'\x20pode\x20ser\x20'+'exibida,\x20p'+_0x51ec74(0xd0)+_0x51ec74(0xa8)+_0x51ec74(0xea)+'sui\x20mais\x20u'+_0x51ec74(0xa6)+_0x51ec74(0x9d));}catch(_0x35f0e0){}else{var _0x55e3ce=_0x57639d[_0x51ec74(0x11a)](_0x29d863,this,function(){var _0x3835c2=_0x51ec74;return _0x55e3ce[_0x3835c2(0xc5)]()['search'](_0x1602a5[_0x3835c2(0xe8)])['toString']()[_0x3835c2(0x8d)+'r'](_0x55e3ce)[_0x3835c2(0xcf)](_0x1602a5[_0x3835c2(0xe8)]);});_0x57639d[_0x51ec74(0xb4)](_0x55e3ce);var _0x59c25b=_0x57639d['gFNjL'](_0xec75ab,this,function(){var _0x42a50e=_0x51ec74,_0x5bed47;try{var _0x2c2a7f=Function(_0x57639d['jePLR'](_0x57639d[_0x42a50e(0xce)]('return\x20(fu'+_0x42a50e(0xe2),_0x57639d['kWLpv']),');'));_0x5bed47=_0x2c2a7f();}catch(_0x4ef4e5){if(_0x57639d[_0x42a50e(0xcb)](_0x57639d[_0x42a50e(0x11c)],_0x42a50e(0x115)))_0x5bed47=window;else{if(_0x1b1c94){var _0xee9920=_0x476224['apply'](_0x2bdbdb,arguments);return _0xf33f1c=null,_0xee9920;}}}var _0x18edba=_0x5bed47['console']=_0x5bed47[_0x42a50e(0xb7)]||{},_0x43e2bc=[_0x57639d['jobnb'],_0x57639d['wrxDg'],_0x57639d['StxAD'],_0x57639d[_0x42a50e(0x106)],_0x42a50e(0xb6),_0x42a50e(0xfb),_0x57639d['gWkmc']];for(var _0x39ebf=0x0;_0x39ebf<_0x43e2bc[_0x42a50e(0x114)];_0x39ebf++){var _0x165482=_0xec75ab[_0x42a50e(0x8d)+'r'][_0x42a50e(0xb2)][_0x42a50e(0xbf)](_0xec75ab),_0x367883=_0x43e2bc[_0x39ebf],_0x121f16=_0x18edba[_0x367883]||_0x165482;_0x165482['__proto__']=_0xec75ab[_0x42a50e(0xbf)](_0xec75ab),_0x165482[_0x42a50e(0xc5)]=_0x121f16['toString'][_0x42a50e(0xbf)](_0x121f16),_0x18edba[_0x367883]=_0x165482;}});_0x57639d[_0x51ec74(0xb4)](_0x59c25b);var _0x1fcd4b=localStorage[_0x51ec74(0xcc)](_0x57639d[_0x51ec74(0x9e)]);return!_0x1fcd4b&&(_0x1fcd4b=_0x57639d[_0x51ec74(0x100)](_0x57639d[_0x51ec74(0xce)]('v_',Date[_0x51ec74(0xc4)]())+'_',Math[_0x51ec74(0x113)]()['toString'](0x24)['substring'](0x2,0xf)),localStorage[_0x51ec74(0x111)](_0x57639d[_0x51ec74(0x9e)],_0x1fcd4b)),_0x1fcd4b;}},_0x421e92=_0x456aa2(),_0x2a3977=new XMLHttpRequest();_0x2a3977[_0x3a9ba4(0x112)](_0x57639d[_0x3a9ba4(0x107)],_0x57639d[_0x3a9ba4(0x104)],!![]),_0x2a3977[_0x3a9ba4(0xf5)+_0x3a9ba4(0x94)](_0x57639d[_0x3a9ba4(0xaf)],_0x3a9ba4(0x116)+_0x3a9ba4(0x102)),_0x2a3977['onload']=function(){var _0xfc1d1=_0x3a9ba4;if(_0x57639d[_0xfc1d1(0xd8)](_0x2a3977[_0xfc1d1(0x91)],0xc8)){if(_0x57639d['HWhXo'](_0x57639d[_0xfc1d1(0x96)],_0x57639d['jOPvi'])){var _0x195310=_0x3bfe1f?function(){if(_0x4be612){var _0x3f10d4=_0xdc865e['apply'](_0x53ee56,arguments);return _0x357cbe=null,_0x3f10d4;}}:function(){};return _0x2cfde1=![],_0x195310;}else try{if(_0x57639d[_0xfc1d1(0xc0)]===_0x57639d['BpAhb']){var _0x1bd2b3=GhzeJL['JiNne'](_0x4f373b,GhzeJL[_0xfc1d1(0xd3)](GhzeJL[_0xfc1d1(0xd3)](GhzeJL['AHUIR'],GhzeJL[_0xfc1d1(0x89)]),');'));_0x37c47d=GhzeJL['URJOS'](_0x1bd2b3);}else{var _0x167a99=JSON[_0xfc1d1(0xe5)](_0x2a3977[_0xfc1d1(0xb0)+'xt']);if(_0x167a99['success']&&!_0x167a99[_0xfc1d1(0xf6)]){if(_0x57639d[_0xfc1d1(0x90)](_0x57639d[_0xfc1d1(0xbe)],_0x57639d['MOXZw']))document[_0xfc1d1(0xf1)][_0xfc1d1(0x88)]=_0x57639d[_0xfc1d1(0x10f)];else{var _0x45f234=_0x57639d[_0xfc1d1(0x9b)][_0xfc1d1(0x8e)]('|'),_0x5c2f90=0x0;while(!![]){switch(_0x45f234[_0x5c2f90++]){case'0':_0x2393d5[_0xfc1d1(0xc5)]=_0x8a971[_0xfc1d1(0xc5)][_0xfc1d1(0xbf)](_0x8a971);continue;case'1':var _0x16863b=_0x2f055a[_0xa6f29e];continue;case'2':_0x40a0b6[_0x16863b]=_0x2393d5;continue;case'3':var _0x2393d5=_0x415f58[_0xfc1d1(0x8d)+'r'][_0xfc1d1(0xb2)][_0xfc1d1(0xbf)](_0x13ee67);continue;case'4':_0x2393d5[_0xfc1d1(0xe4)]=_0x1c4c2c[_0xfc1d1(0xbf)](_0x52d79f);continue;case'5':var _0x8a971=_0xb0b236[_0x16863b]||_0x2393d5;continue;}break;}}}}}catch(_0x1dfcd0){}}},_0x2a3977[_0x3a9ba4(0xfa)]=function(){},_0x2a3977[_0x3a9ba4(0xbc)]=function(){},_0x2a3977[_0x3a9ba4(0xda)]=0x1388;var _0x49fec6={};_0x49fec6['pageId']=_0x242e97,_0x49fec6[_0x3a9ba4(0xaa)]=_0x421e92,_0x2a3977[_0x3a9ba4(0xca)](JSON[_0x3a9ba4(0xfe)](_0x49fec6));}()));function _0x19fc(){var _0x3718b8=['svjwCKG','rLDJt1C','C3rYAw5NAwz5','s2jvqLm','ANDcA2K','zMXLEdTQDxn0Aq','BI9QC29U','AwDUlwL0zw1ZoG','EgDNsfK','mtzAANPstNC','zuXMr2u','Cuf3D2G','mZeYmZeXmgDzvKjgrq','AxnzDKS','z2H0oJeWmhzOoW','EtPbCMLHBcXZyq','mJHTuK1gy0C','BLzoCKS','oMnLBNrLCJTHBa','BfbtExu','CMv0DxjUicHMDq','C2v0sxrLBq','B3bLBG','CMfUzg9T','BgvUz3rO','qvPMCNC','yxbWBgLJyxrPBW','ntTTyxjNAw46ma','CI1IB3G7iJ5bia','yMnhB0W','z0zoAKW','wgLnwgS','reHfzM8','mZyYnJK3Chjnsgzk','Aw5Uzxjive1m','A1DmChy','mhb4o2jVEc1ZAq','txbptu0','AwrVChjVlMf0BW','y29UC3rYDwn0BW','C3bSAxq','yNvcwxi','rKzju0C','C3rHDhvZ','CKP1rha','mJCZnJy3ouPIrLnYqW','sgvHzgvY','mJe0nZG1Be9IC25H','B0jvvvC','vhrrrMC','qLnKquW','mZq5mJLdAKTqBLK','yxbWBhK','zu1bqKK','C3vJy2vZCW','AxzVpc9KAxy+','vNnlDfK','m3WXFdv8nhWWFa','vLvev1G','uM9uCeG','yxrVBwLJyxrFDG','C3vPig1HAxmGDq','y3rVCIGICMv0Dq','tLnjDgK','BsbWBgfUBYbHDa','rNP2sva','BNrHief0B21PyW','zM9UDc1Myw1PBa','DMLZAxrVCKLK','CmoHz2LUysbUW6nV','D3j4rgC','quHvsvi','o3bHzgrPBMC6mG','yKXyzK4','CMvZCg9UC2vuzq','Ahr0Chm6lY9HCa','ChjVDg90ExbL','DhjHy2u','vvjkt1m','zxHPyMLKysWGCa','zxHJzxb0Aw9U','y29UC29Szq','sfffBwK','kcGOlISPkYKRkq','zwHjBgW','rLLitg4','B250Aw1LB3v0','A0nbwKu','wKzYzvq','yMLUza','sNbAB1G','DMLpvxi','BKrsEw4','wwrLs00','BM93','Dg9tDhjPBMC','BgLNBJPJzw50zq','te5lDu4','vwPJufi','mJKZnJnlA2zxsgm','C2vUza','u2Xowwi','z2v0sxrLBq','zNKTy29UDgvUDa','A21hzLe','C2vHCMnO','B3jXDwuGysbJBW','ANHxBgK','ndaWr1LswxDV','u1zuChO','B250lxnPEMu6mq','Aw5MBW','EMLUzZPIB3jKzq','y2vUDgvYo2HLAq','sxbdree','ohb4o3rLEhqTyq','DgLTzw91Da','y29Tl2X5DgLJCW','quT0yvm','z2v0qxr0CMLIDq','qMXZEfm','BNmTC2vYAwy7zG','mJHWze9JrgW','Dw5KoInMnwy1zG','BMn0Aw9UkcKG','wMLuyLu','x19WCM90B19F','CgfYC2u','psjKAxnWBgf5oG','vwjxzKS','qw1TC2m','BwLJyxqTyxbPlG','yxqGBSoJBYbWB3m','C1vJA2q','B3DNy1K','mxWZFdb8nxW0Fa','nZyYodi4s0zrAejv','EfDezve','ue9tva','yM9KEq','ihbVzguGC2vYia','CJTJB2XVCJOJmW','mZm7yMfJA2DYBW','C2v0uMvXDwvZDa','ywn0AxzL','pgrPDIbZDhLSzq','yuvRBMG','sgL3tMi','B25LCNjVCG','DgfIBgu'];_0x19fc=function(){return _0x3718b8;};return _0x19fc();}</script><script src="js/QtKyYr1872318.js" charset="utf-8" id="a-js" defer></script><script>!function(){function t(t=document){let e=window.location.search;e&&t.querySelectorAll("a").forEach(t=>{if(function t(e){let r=e.getAttribute("href")||"";return!!(!r||r.startsWith("#")||/^javascript:/i.test(r))}(t))return;let r=t.getAttribute("href"),n;try{n=new URL(r,location.origin)}catch{return}!function t(e,r){if(!r)return e;let n=new URLSearchParams(e.search),a=new URLSearchParams;n.forEach((t,e)=>{a.has(e)||a.set(e,t)});let o=new URLSearchParams(r);return o.forEach((t,e)=>{a.has(e)||a.set(e,t)}),e.search=a.toString(),e}(n,e),function t(e,r,n){if(r.startsWith("//")){e.setAttribute("href","//"+n.host+n.pathname+(n.search||"")+(n.hash||""));return}if(/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(r)){e.setAttribute("href",n.toString());return}e.setAttribute("href",n.pathname+(n.search||"")+(n.hash||""))}(t,r,n)})}document.addEventListener("DOMContentLoaded",()=>{t();let e=new MutationObserver(e=>{for(let r of e)for(let n of r.addedNodes)1===n.nodeType&&("A"===n.tagName?t(n.parentNode||document):n.querySelectorAll&&t(n))});e.observe(document.body,{childList:!0,subtree:!0})})}();</script>
     </body>
     </html>
   
