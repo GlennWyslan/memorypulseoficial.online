@@ -11,6 +11,35 @@
         }
       }
     
+      function atomiGetVturbSrc() {
+        try {
+          var src = "";
+
+          try {
+            var pageUrl = new URL(window.location.href);
+            src = pageUrl.searchParams.get("src") || "";
+            if (src) return location.search != "" ? "&src=" + src : "?src=" + src;
+          } catch (e) {}
+
+          try {
+            var links = document.querySelectorAll('a[href*="src="]');
+            for (var i = 0; i < links.length; i++) {
+              try {
+                var u = new URL(links[i].href);
+                var s = u.searchParams.get("src");
+                if (s) return location.search != "" ? "&src=" + s : "?src=" + s;
+              } catch (e2) {
+                console.log(e2);
+              }
+            }
+          } catch (e1) {}
+
+          return "";
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    
     (function() {
       try {
         document.addEventListener('DOMContentLoaded', function () {
@@ -29,7 +58,7 @@
     
           (function() {
             try {
-              var vturbvideoId = "68a4e97acad301b5b6b57d45";
+              var vturbvideoId = "688bd29ffef6b9b87f4df054";
               var compKey = "1cbee73";
               const twr = false;
               var SECONDS_TO_DISPLAY = 800;
@@ -43,13 +72,6 @@
                 runDelayedFunctions();
                 localStorage.setItem(alreadyDisplayedKey, true);
               };
-              if (alreadyElsDisplayed === 'true') {
-                setTimeout(function () {
-                  showHiddenElements();
-                }, 100);
-              } else {
-                startWatchVideoProgress();
-              }
               function getVideoInstance() {
                 if (smartplayer.instances.length > 1) {
                   return smartplayer.instances.find(
@@ -58,7 +80,10 @@
                 }
                 return smartplayer.instances[0];
               };
-              function startWatchVideoProgress() {
+              window.startWatchVideoProgress = function startWatchVideoProgress(reAttempts) {
+                if (reAttempts) {
+                  attempts = reAttempts;
+                }
                 
                 console.log("vturbvideoId", vturbvideoId);
                 if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
@@ -77,6 +102,13 @@
                   showHiddenElements();
                 });
               };
+              if (alreadyElsDisplayed === 'true') {
+                setTimeout(function () {
+                  showHiddenElements();
+                }, 100);
+              } else {
+                window.startWatchVideoProgress();
+              }
             } catch (error) {
               console.log(error);
             }
